@@ -45,12 +45,12 @@
 }
 
 .c-modal__container {
+  aspect-ratio: 2 / 3;
   border-radius: 50%;
   right: 0;
   top: 0;
   transform-origin: right top;
   width: min(90%, 330px);
-  aspect-ratio: 2 / 3;
 
   @at-root {
     .c-modal-slide[aria-hidden='false'] & {
@@ -84,8 +84,8 @@
 }
 
 .c-modal__bg {
-  transform: scale(1.8, 2.6);
-  top: -10px;
-  right: -60px;
   pointer-events: none;
+  right: -60px;
+  top: -10px;
+  transform: scale(1.8, 2.6);
 }

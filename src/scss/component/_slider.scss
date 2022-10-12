@@ -19,10 +19,10 @@
 }
 
 .c-slider__slide {
-  font-size: clamp(#{t.rem(80px)}, #{t.rem(20px)} + 7.14vw, #{t.rem(200px)});
-  white-space: nowrap;
   color: transparent;
+  font-size: clamp(#{t.rem(80px)}, #{t.rem(20px)} + 7.14vw, #{t.rem(200px)});
   -webkit-text-stroke: 1px var(--main-color);
+  white-space: nowrap;
 
   span {
     display: inline-block;

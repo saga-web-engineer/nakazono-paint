@@ -1,4 +1,4 @@
-@use "../tool/" as t;
+@use '../tool/' as t;
 
 // mv
 .p-top-mv {
@@ -18,24 +18,27 @@
 }
 
 .p-top-mv__copy {
-  font-size: clamp(#{t.rem(30px)}, 15px + 4.64vw, #{t.rem(80px)});
-  mix-blend-mode: multiply;
-  left: min(7%, 133px);
   bottom: 16%;
+  font-size: clamp(#{t.rem(30px)}, 15px + 4.64vw, #{t.rem(80px)});
+  left: min(7%, 133px);
+  mix-blend-mode: multiply;
 
   &::before {
+    animation: border-transform 3s linear infinite;
+    background: radial-gradient(
+      105.68% 45.69% at 92.95% 50%,
+      rgb(105 244 253 / 50%) 0%,
+      rgb(160 255 244 / 9.5%) 53.91%,
+      rgb(254 216 255 / 0%) 100%
+    ),radial-gradient(103.18% 103.18% at 90.11% 102.39%, #c9fff2 0%, rgb(230 255 250 / 0%) 100%),radial-gradient(90.45% 90.45% at 87.84% 9.55%, #ffd2f5 0%, rgb(254 219 246 / 0%) 100%),linear-gradient(135.66deg, rgb(0 122 255 / 60%) 14.89%, rgb(216 202 254 / 0%) 74.33%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
+    border-radius: 50%;
     content: '';
-    width: 100%;
+    filter: blur(30px);
     height: 100%;
     position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(105.68% 45.69% at 92.95% 50%, rgba(105, 244, 253, 0.5) 0%, rgba(160, 255, 244, 0.095) 53.91%, rgba(254, 216, 255, 0) 100%),
-      radial-gradient(103.18% 103.18% at 90.11% 102.39%, #C9FFF2 0%, rgba(230, 255, 250, 0) 100%),
-      radial-gradient(90.45% 90.45% at 87.84% 9.55%, #FFD2F5 0%, rgba(254, 219, 246, 0) 100%),
-      linear-gradient(135.66deg, rgba(0, 122, 255, 0.6) 14.89%, rgba(216, 202, 254, 0) 74.33%);
-    background-blend-mode: normal, normal, normal, normal, normal, normal; filter: blur(30px);
+    width: 100%;
     z-index: -1;
-    animation: border-transform 3s linear infinite;
 
     @keyframes border-transform {
       0% {
@@ -56,46 +59,46 @@
 .p-top-mv__inner {
   --height: clamp(200px, 100px + 28.57vw, 500px);
 
-  height: var(--height);
-  width: min(90%, 1200px);
-  overflow: hidden;
   border-radius: 9999px;
+  height: var(--height);
+  overflow: hidden;
+  width: min(90%, 1200px);
 }
 
 .p-top-mv__image {
-  width: 100%;
   height: calc(var(--height) + 200px);
   object-fit: cover;
+  width: 100%;
 }
 
 .p-top-mv__accessory {
-  width: min(72%, 1104px);
   margin-top: max(-12.89vw, -180px);
+  width: min(72%, 1104px);
 }
 
 .p-top-mv__shape {
-  width: 100%;
   height: 100%;
+  width: 100%;
 
   div {
     opacity: 0.8;
 
     &:first-of-type {
-      width: min(20vw, 400px);
       left: 8%;
       top: calc(100% - 67.19vw + 220px + 8%);
+      width: min(20vw, 400px);
     }
 
     &:nth-of-type(2) {
-      width: min(12vw, 260px);
       left: 20%;
       top: calc(100% - 67.19vw + 220px + 15%);
+      width: min(12vw, 260px);
     }
 
     &:last-of-type {
-      width: min(15vw, 300px);
-      right: 8%;
       bottom: 0;
+      right: 8%;
+      width: min(15vw, 300px);
     }
   }
 }
@@ -105,7 +108,6 @@
   min-height: min(9.08vw, 160px);
   user-select: none;
 }
-
 
 // about
 // .p-top-about {
@@ -121,8 +123,8 @@
   &:first-of-type {
     --size: min(105.56vw, 1460px);
 
-    width: 90%;
     height: var(--size);
+    width: 90%;
 
     @include t.responsive(lg) {
       width: 50%;
@@ -130,13 +132,13 @@
 
     &::after {
       @include t.responsive(lg) {
+        background: linear-gradient(90deg, transparent 60%, var(--base-color));
         content: '';
-        width: 100%;
         height: 100%;
+        left: 0;
         position: absolute;
         top: 0;
-        left: 0;
-        background: linear-gradient(90deg, transparent 60%, var(--base-color));
+        width: 100%;
       }
     }
   }
@@ -145,16 +147,15 @@
     --size: min(30.67vw, 300px);
 
     @include t.responsive(md) {
-      width: var(--size);
       aspect-ratio: 1;
       margin-top: 30px;
+      width: var(--size);
     }
 
-
     @include t.responsive(lg) {
+      bottom: 36%;
       margin-top: 0;
       right: 0;
-      bottom: 36%;
     }
   }
 
@@ -162,9 +163,9 @@
     --size: min(52.78vw, 620px);
 
     @include t.responsive(md) {
-      width: 40%;
       height: var(--size);
       margin-top: calc(var(--size) / -2.5);
+      width: 40%;
     }
 
     @include t.responsive(lg) {
@@ -176,8 +177,8 @@
   }
 
   img {
-    object-fit: cover;
     height: calc(var(--size) + 200px);
+    object-fit: cover;
   }
 }
 
@@ -191,8 +192,8 @@
 
   @include t.responsive(lg) {
     left: 40%;
-    top: 10%;
     padding: 0;
+    top: 10%;
   }
 
   p {
@@ -217,9 +218,9 @@
 
 .p-top-plan__item {
   border-top: solid 1px var(--gray-color-primary);
-  padding-top: min(8.33vw, 40px);
   display: grid;
   gap: min(2.78vw, 30px);
+  padding-top: min(8.33vw, 40px);
 
   @include t.responsive(lg) {
     padding-inline: 1em;
@@ -229,14 +230,14 @@
   &:nth-of-type(odd) {
     &::before {
       @include t.responsive(lg) {
+        background-color: var(--gray-color-primary);
         content: '';
         height: 80%;
-        width: 1px;
-        background-color: var(--gray-color-primary);
         position: absolute;
-        top: 50%;
         right: 0;
+        top: 50%;
         transform: translateY(-50%);
+        width: 1px;
       }
     }
   }

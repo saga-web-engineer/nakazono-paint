@@ -23,50 +23,50 @@
 // }
 
 .c-button-wave {
-  color: var(--base-color);
-  font-size: clamp(t.rem(18px), 9px + 1.69vw, t.rem(22px));
-  padding: clamp(12px, 6px + 1.56vw, 18px) 0;
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-  border-radius: 9999px;
-  width: min(90%, 360px);
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: transparent;
+  border-radius: 9999px;
+  color: var(--base-color);
+  display: flex;
+  font-size: clamp(t.rem(18px), 9px + 1.69vw, t.rem(22px));
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(12px, 6px + 1.56vw, 18px) 0;
+  position: relative;
   text-shadow: 0 0 2px var(--main-color);
+  width: min(90%, 360px);
 }
 
 .c-button-wave__effect {
+  background: linear-gradient(45deg, var(--main-color), var(--blue-color-primary));
+  height: 250px;
+  left: 0;
   position: absolute;
   top: max(-21.11vw, -100px);
-  left: 0;
   width: 100%;
-  height: 250px;
-  background: linear-gradient(45deg, var(--main-color), var(--blue-color-primary));
 
   &::before,
   &::after {
     content: '';
-    position: absolute;
-    width: 150%;
     height: 200%;
-    top: -10px;
     left: 50%;
+    position: absolute;
+    top: -10px;
     transform: translate(-50%, -75%);
     transition: var(--duration-A) ease;
+    width: 150%;
   }
 
   &::before {
-    border-radius: 40%;
-    background-color: var(--wave-color-secondary);
     animation: wave 7s linear infinite;
+    background-color: var(--wave-color-secondary);
+    border-radius: 40%;
   }
 
   &::after {
-    border-radius: 45%;
-    background-color: var(--wave-color-primary);
     animation: wave 12s linear infinite;
+    background-color: var(--wave-color-primary);
+    border-radius: 45%;
   }
 
   @keyframes wave {
@@ -84,9 +84,9 @@
       @include t.hover {
         .c-button-wave__effect::before,
         .c-button-wave__effect::after {
-          width: 0;
           height: 0;
           transition: 2s ease;
+          width: 0;
         }
       }
     }

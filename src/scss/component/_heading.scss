@@ -1,21 +1,21 @@
 @use '../tool/' as t;
 
 .c-heading {
-  font-size: clamp(#{t.rem(28px)}, 3.83vw, #{t.rem(48px)});
-  position: relative;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  font-size: clamp(#{t.rem(28px)}, 3.83vw, #{t.rem(48px)});
+  justify-content: center;
+  position: relative;
 
   &::before {
-    content: attr(data-english);
-    font-size: clamp(#{t.rem(120px)}, 27.78vw, #{t.rem(360px)});
-    color: var(--white-color-primary);
-    font-family: var(--font-english);
-    position: absolute;
     bottom: 0;
+    color: var(--white-color-primary);
+    content: attr(data-english);
+    font-family: var(--font-english);
+    font-size: clamp(#{t.rem(120px)}, 27.78vw, #{t.rem(360px)});
     left: 0;
     line-height: 0.8;
+    position: absolute;
     z-index: -1;
   }
 }

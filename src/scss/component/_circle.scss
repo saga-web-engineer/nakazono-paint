@@ -1,4 +1,4 @@
-@use "../tool/" as t;
+@use '../tool/' as t;
 
 .c-circle {
   aspect-ratio: 1;
@@ -24,24 +24,23 @@
 }
 
 .c-circle__icon {
-  width: 76%;
-  aspect-ratio: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   animation: inner-rotate 48s linear infinite;
-    height: fit-content;
+  aspect-ratio: 1;
+  height: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 76%;
 
-    @keyframes inner-rotate {
-      0% {
-        transform: translate(-50%, -50%) rotateZ(0deg);
-      }
-
-      100% {
-        transform: translate(-50%, -50%) rotateZ(-360deg);
-      }
+  @keyframes inner-rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
     }
+
+    100% {
+      transform: translate(-50%, -50%) rotateZ(-360deg);
+    }
+  }
 }
 
 .c-circle__arrow {

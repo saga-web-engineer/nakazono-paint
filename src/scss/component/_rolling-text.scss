@@ -1,11 +1,11 @@
-@use "../tool/" as t;
+@use '../tool/' as t;
 
 .c-rolling-text {
   font-size: var(--font-size);
-  padding-inline: 0.25em;
   height: calc(var(--font-size) * 1.5);
   line-height: calc(var(--font-size) * 1.5);
   overflow: hidden;
+  padding-inline: 0.25em;
 
   @include t.hover {
     .js-text-letter {

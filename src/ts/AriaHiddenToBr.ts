@@ -6,8 +6,7 @@ const addAriaHiddenToBr = (): void => {
   const brTags = document.querySelectorAll<HTMLBRElement>('br');
 
   brTags.forEach((brTag) => {
-    if (!brTag.hasAttribute('aria-hidden'))
-      brTag.setAttribute('aria-hidden', 'true');
+    if (!brTag.hasAttribute('aria-hidden')) brTag.setAttribute('aria-hidden', 'true');
   });
 };
 

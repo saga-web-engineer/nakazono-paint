@@ -3,14 +3,10 @@
  */
 
 (function (): void {
-  const viewport = document.querySelector(
-    'meta[name="viewport"]',
-  ) as HTMLMetaElement;
+  const viewport = document.querySelector('meta[name="viewport"]') as HTMLMetaElement;
   function switchViewport(): void {
     const value =
-      window.outerWidth > 360
-        ? 'width=device-width,initial-scale=1'
-        : 'width=360';
+      window.outerWidth > 360 ? 'width=device-width,initial-scale=1' : 'width=360';
     if (viewport.getAttribute('content') !== value) {
       viewport.setAttribute('content', value);
     }

@@ -1,9 +1,9 @@
 @use '../tool/' as t;
 
 .c-menu-button {
-  width: 80px;
   aspect-ratio: 1;
   background-color: transparent;
+  width: 80px;
 
   &.--close {
     right: 0;
@@ -15,8 +15,8 @@
   background-color: var(--base-color);
   height: 1px;
   left: 50%;
-  width: 46%;
   transform: translateX(-50%);
+  width: 46%;
 
   &.--open {
     &:nth-of-type(1) {
@@ -38,8 +38,8 @@
         left: 50%;
         position: absolute;
         top: 4px;
-        white-space: nowrap;
         transform: translateX(-50%);
+        white-space: nowrap;
       }
     }
   }
