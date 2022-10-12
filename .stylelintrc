@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
+  ],
+
+  "plugins": ["stylelint-order", "stylelint-prettier"],
+
+  "ignoreFiles": [
+    "dist/assets/css/*.css",
+    "src/scss/foundation/*.scss",
+    "src/scss/tool/_variables.scss",
+    "src/scss/utility/*.scss"
+  ],
+
+  "rules": {
+    "prettier/prettier": true,
+    "indentation": 2,
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": "never-multi-line",
+    "order/properties-alphabetical-order": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "keyframes-name-pattern": null
+  }
+}

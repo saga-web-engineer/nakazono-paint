@@ -1,0 +1,6 @@
+@use '../tool/' as t;
+
+.p-faq {
+  display: grid;
+  gap: min(8vw, 60px);
+}

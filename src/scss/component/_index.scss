@@ -1,0 +1,43 @@
+// アコーディオンメニューのスタイル
+@use 'accordion';
+
+// ボタンのスタイル
+@use 'button';
+
+// カードコンポーネント
+@use 'card';
+
+// アンダーライン
+@use 'underline';
+
+// アイコン
+@use 'icon';
+
+// section間
+@use 'separate';
+
+
+
+// ローリングテキスト
+@use "rolling-text";
+
+// サークル
+@use "circle";
+
+// スライダー
+@use 'slider';
+
+// modal
+@use 'modal';
+
+// ハンバーガーメニュー
+@use 'menu-button';
+
+// ナビゲーション
+@use 'nav';
+
+// 見出しやタイトル
+@use 'heading';
+
+// ラッパー
+@use 'wrapper';

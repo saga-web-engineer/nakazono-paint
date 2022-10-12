@@ -1,0 +1,59 @@
+@use '../tool/' as t;
+
+:target {
+  scroll-margin-top: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+
+  // for Firefox
+  scrollbar-color: var(--main-color) transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--base-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 9999px;
+  }
+}
+
+body {
+  font-family: var(--font-default);
+  font-size: clamp(#{t.rem(14px)}, #{t.rem(10px)} + 1.04vw, #{t.rem(18px)});
+  color: var(--text-color);
+  font-weight: 400;
+  background-color: var(--base-color);
+  letter-spacing: 0.125em;
+  line-height: 1.8;
+  text-size-adjust: 100%;
+
+  @include t.responsive(sm) {
+    margin: 0;
+  }
+
+  @include t.responsive(md) {
+    margin: 0;
+  }
+
+  @include t.responsive(lg) {
+    margin: 0;
+  }
+
+  @include t.responsive(xl) {
+    margin: 0;
+  }
+
+  @include t.responsive(xxl) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,6 @@
+@use '../tool/' as t;
+
+.c-wrapper {
+  width: min(94%, 1290px);
+  margin-inline: auto;
+}

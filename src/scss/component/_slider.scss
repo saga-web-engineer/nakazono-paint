@@ -1,0 +1,31 @@
+@use '../tool/' as t;
+
+.c-slider {
+  overflow: hidden;
+}
+
+.c-slider__list {
+  animation: infinity-scroll-left 190s infinite linear 0.5s both;
+
+  @keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.c-slider__slide {
+  font-size: clamp(#{t.rem(80px)}, #{t.rem(20px)} + 7.14vw, #{t.rem(200px)});
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--main-color);
+
+  span {
+    display: inline-block;
+    margin-left: min(2.6vw, 46px);
+  }
+}

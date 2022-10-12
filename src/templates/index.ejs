@@ -1,0 +1,161 @@
+<%
+  const meta = {
+    title: '中園塗装 | ',
+    description: '',
+    url: '',
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('include/_header') %>
+    <main class="main">
+      <!-- mv -->
+      <section class="p-top-mv u-flex:lg u-column:lg u-relative:lg">
+        <div class="p-top-mv__wrapper u-relative">
+          <div class="p-top-mv__inner u-relative u-mx-auto js-parallax">
+            <img class="p-top-mv__image" src="<%= path %>assets/img/top/mv.jpg" alt="" width="1200" height="700" decoding="async">
+          </div>
+          <img class="p-top-mv__accessory u-block u-mx-auto" src="<%= path %>assets/img/top/mv-b.png" alt="" width="1200" height="1695" decoding="async">
+          <h1 class="p-top-mv__copy u-absolute">佐賀で一番、<br>頼れる塗装屋。</h1>
+
+          <a class="c-circle u-absolute u-flex u-justify-center" href="#about">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400" width="400" height="400">
+              <defs>
+                <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
+              </defs>
+              <text fill="var(--gray-color-secondary)" font-size="clamp(31px, calc(34px - 0.5vw), 32px)" font-family="Kiwi Maru" font-weight="400">
+                <textPath startOffset="0" xlink:href="#txt-path">Scroll Down * Scroll Down * Scroll Down * Scroll Down * Scroll Down * </textPath>
+              </text>
+            </svg>
+            <img class="c-circle__icon u-absolute" src="<%= path %>assets/img/top/circle.png" alt="" width="300" height="300" decoding="async">
+            <div class="c-circle__arrow u-absolute">
+              <svg fill="var(--main-color)" viewBox="0 0 32 38">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0094 38L15.1556 38C15.1556 29.7266 8.43851 23.0095 0.165117 23.0095L0.165117 21.1557C6.69411 21.1557 12.3602 24.8781 15.1556 30.3152L15.1556 0.924513L17.0094 0.924513L17.0094 30.3152C19.804 24.8781 25.471 21.1557 32 21.1557L32 23.0095C23.7266 23.0095 17.0094 29.7266 17.0094 38Z"></path>
+              </svg>
+            </div>
+          </a>
+
+        </div>
+        <div class="p-top-mv__shape u-block:lg u-absolute" hidden>
+          <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape7.svg" alt="" width="400" height="400" decoding="async"></div>
+          <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape1.svg" alt="" width="260" height="260" decoding="async"></div>
+          <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape4.svg" alt="" width="300" height="300" decoding="async"></div>
+        </div>
+        <div class="p-top-mv__slider u-flex:lg u-mt-auto:lg" hidden>
+
+          <div class="c-slider u-flex">
+            <% for (let i = 0; i < 2; i++) { %>
+            <ul class="c-slider__list u-flex">
+              <% for (let i = 0; i < 3; i++) { %>
+              <li class="c-slider__slide"><span>Welcome</span><span>to</span><span>Nakazono</span><span>Paint.</span></li>
+              <% } %>
+            </ul>
+            <% } %>
+          </div>
+
+        </div>
+
+      </section><!-- //mv -->
+      <!-- about -->
+      <section class="p-top-about">
+        <div class="c-wrapper">
+          <h2 class="c-heading" id="top-about" data-english="About">当店について</h2>
+          <div class="p-top-about__container u-relative:lg u-mx-full:lg">
+            <div class="p-top-about__image u-ml-full u-relative:lg js-parallax">
+              <img src="<%= path %>assets/img/top/about1.jpg" alt="" width="960" height="1460" decoding="async">
+            </div>
+            <div class="p-top-about__text u-absolute:lg u-zi1">
+              <p>
+                昭和50年創業。<br>親子3代に渡り<br>塗装業を営んでおります。
+              </p>
+              <p>
+                家というものは、職人と依頼主が、<br>魂をこめて作り上げるもの。<br>その大切な住まいを守るのが<br>私たち塗装職人です。
+              </p>
+              <p>
+                私たちは塗装業を営むなかで<br>お客様や他業種の職人など<br>たくさんの人との繋がりがあり<br>この繋がりを大切にしています。
+              </p>
+              <p>
+                私たちは塗装業だけにとどまらず、<br>住まいのことなら<br class="u-none:sm">何でも相談でき、解決できる<br>佐賀で一番頼れる塗装店をめざしています。
+              </p>
+              <a class="c-button-wave" href="<%= path %>about/">
+                <div class="c-button-wave__effect"></div>
+                <span class="u-relative">詳しく見てみる</span>
+              </a>
+            </div>
+            <div class="p-top-about__image u-ml-auto u-mr-full u-block:md u-absolute:lg js-parallax" hidden>
+              <img src="<%= path %>assets/img/top/about2.jpg" alt="" width="300" height="500" decoding="async">
+            </div>
+            <div class="p-top-about__image u-block:md u-relative:lg js-parallax" hidden>
+              <img src="<%= path %>assets/img/top/about3.jpg" alt="" width="420" height="620" decoding="async">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //about -->
+      <!-- plan -->
+      <section class="p-top-plan">
+        <div class="c-wrapper">
+          <h2 class="c-heading" id="top-plan" data-english="Plan">施工プラン</h2>
+          <ul class="p-top-plan__list">
+            <%
+              const plan = [
+                {
+                  name: '外壁塗装料金',
+                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生費、消費税込み、3回塗り）',
+                  price: '￥1,210 ~ ￥3,630',
+                  note: '※壁質、塗料によって金額が異なります'
+                },
+                {
+                  name: '内装、室内塗装料金',
+                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生費、消費税込み、2回塗り）',
+                  price: '￥1,100 ~ ￥1,650',
+                  note: '※塗料によって金額が異なります'
+                },
+                {
+                  name: '屋根塗装料金',
+                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生、ケレン、清掃費、消費税込み、3回塗り）',
+                  price: '￥1,420 ~ ￥2,980',
+                  note: '※屋根材、塗料によって金額が異なります'
+                },
+                {
+                  name: '防水工事料金',
+                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生、清掃費、消費税込み、4回塗り）',
+                  price: '￥1,640 ~ ￥8,800',
+                  note: '※施工部、塗材によって金額が異なります'
+                }
+              ];
+
+              plan.forEach((value, index) => {
+            %>
+            <li class="p-top-plan__item u-text-center">
+              <h3 class="p-top-plan__plan"><%= value.name %></h3>
+              <p><%- value.detail %></p>
+              <p class="p-top-plan__price"><%= value.price %></p>
+              <p><%= value.note %></p>
+            </li>
+            <% }); %>
+          </ul>
+          <a class="c-button-wave u-mx-auto" href="<%= path %>about/">
+            <div class="c-button-wave__effect"></div>
+            <span class="u-relative">詳しく見てみる</span>
+          </a>
+        </div>
+      </section><!-- //plan -->
+      <!-- works -->
+      <section class="p-top-works">
+        <div class="c-wrapper">
+          <h2 class="c-heading" id="top-works" data-english="Works">施工事例</h2>
+        </div>
+      </section><!-- works -->
+    </main>
+    <%- include('include/_footer') %>
+  </div>
+</body>
+</html>

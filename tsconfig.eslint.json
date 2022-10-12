@@ -1,0 +1,11 @@
+// https://typescript-eslint.io/rules/
+
+{
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "allowJs": true
+  },
+
+  "include": ["src", ".*.js", "*.js", "src/ts/test_for_jest.ts", "src/ts/__tests__/**/*.ts"]
+}

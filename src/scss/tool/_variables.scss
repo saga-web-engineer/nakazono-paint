@@ -1,0 +1,42 @@
+@use 'sass:map';
+
+$breakpoints: (
+  xs: null,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+:root {
+  // color
+  --base-color: #fff;
+  --main-color: #007aff;
+  --text-color: #625a5a;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --header-color: rgba(255, 255, 255, 0.4);
+  --wave-color-primary: rgba(255, 255, 255, 0.7);
+  --wave-color-secondary: rgba(255, 255, 255, 0.5);
+  --white-color-primary: #f0f8f8;
+  --gray-color-primary: #eff2f6;
+  --gray-color-secondary: #bbb;
+  --blue-color-primary: #29abe2;
+  --red-color-primary: #f72f47;
+  --green-color-primary: #44c08a;
+  --pink-color-secondary: #ff9393;
+
+  // font
+  --font-default: 'Kiwi Maru', serif;
+  --font-english: 'Oooh Baby', cursive;
+
+  // easing
+  --easing-hover: ease-in-out;
+  --easing-text: cubic-bezier(0.76, 0, 0.24, 1);
+  --easing-faded: cubic-bezier(0, 0, 0.2, 1);
+  --easing-overlay: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  // duration
+  --duration-A: 0.6s;
+  --duration-B: 0.3s;
+}

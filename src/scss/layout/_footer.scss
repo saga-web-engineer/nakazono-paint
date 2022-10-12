@@ -1,0 +1,53 @@
+@use '../tool/' as t;
+
+.footer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 40px 20px;
+  width: 100%;
+
+  @include t.responsive(md) {
+    padding: 80px min(5.21vw, 80px) 80px min(10.1vw, 160px);
+  }
+}
+
+.footer__container {
+  @include t.responsive(lg) {
+    width: min(80%, 1200px);
+  }
+}
+
+.footer__menu {
+  font-size: clamp(#{t.rem(14px)}, 2.78vw, #{t.rem(22px)});
+  width: fit-content;
+}
+
+.footer__item {
+  transition: opacity 0.2s, transform 0.2s var(--easing-hover);
+
+  @include t.hover {
+    opacity: 0.6;
+    transform: translateX(4px);
+  }
+
+  &::before {
+    background-color: var(--white-color-primary);
+    content: '';
+    height: 1px;
+    margin-right: 8px;
+    width: 10px;
+
+    @include t.responsive(lg) {
+      width: 24px;
+    }
+  }
+}
+
+.footer__inner {
+  max-width: 560px;
+}
+
+.footer__link {
+  gap: 1em;
+}

@@ -1,0 +1,34 @@
+@use '../tool/' as t;
+
+.header {
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  @include t.responsive(xl) {
+    backdrop-filter: blur(10px);
+    background-color: var(--header-color);
+  }
+}
+
+.header__inner {
+  width: min(90%, 1200px);
+
+  @include t.responsive(xl) {
+    padding-block: 19px;
+  }
+}
+
+// .header__nav {
+
+// }
+
+.header__list {
+  gap: 1.25em;
+}
+
+.header__link {
+  --font-size: 1.1em;
+  --active-color: var(--main-color);
+}

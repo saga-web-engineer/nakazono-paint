@@ -1,0 +1,47 @@
+@use '../tool/' as t;
+
+.c-card {
+  display: grid;
+  grid-gap: min(2.78vw, 30px);
+  grid-template-columns: repeat(2, 1fr);
+
+  // grid-template-columns: repeat(auto-fill, minmax(min(42.22vw, 335px), 1fr));
+
+  @include t.responsive(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-card__thumb {
+  img {
+    width: 100vw;
+  }
+}
+
+.c-card__content {
+  background-color: var(--white-color-quaternary);
+  color: var(--black-color-primary);
+  padding: min(1.74vw, 20px) min(1.74vw, 20px) min(2.78vw, 30px);
+
+  @include t.responsive(xxl) {
+    padding-bottom: min(3.14vw, 60px);
+  }
+}
+
+.c-card__title {
+  text-indent: max(-1.11vw, -8px);
+
+  &::before {
+    content: '【';
+  }
+
+  &::after {
+    content: '】';
+  }
+}
+
+.c-card__text {
+  &::before {
+    content: '￥';
+  }
+}

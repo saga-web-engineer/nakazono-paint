@@ -1,0 +1,91 @@
+@use '../tool/' as t;
+
+.c-modal {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.c-modal__overlay {
+  background-color: var(--overlay-color);
+  inset: 0;
+  margin: 0;
+
+  @at-root {
+    .c-modal-slide[aria-hidden='false'] & {
+      animation: overlay-fadein var(--duration-B) var(--easing-faded);
+
+      @keyframes overlay-fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    .c-modal-slide[aria-hidden='true'] & {
+      animation: overlay-fadeout var(--duration-B) var(--easing-faded);
+
+      @keyframes overlay-fadeout {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.c-modal__container {
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  transform-origin: right top;
+  width: min(90%, 330px);
+  aspect-ratio: 2 / 3;
+
+  @at-root {
+    .c-modal-slide[aria-hidden='false'] & {
+      animation: modal-slidein var(--duration-A) var(--easing-faded);
+
+      @keyframes modal-slidein {
+        from {
+          transform: scale(0);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .c-modal-slide[aria-hidden='true'] & {
+      animation: modal-slideout var(--duration-A) var(--easing-faded);
+
+      @keyframes modal-slideout {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+}
+
+.c-modal__bg {
+  transform: scale(1.8, 2.6);
+  top: -10px;
+  right: -60px;
+  pointer-events: none;
+}

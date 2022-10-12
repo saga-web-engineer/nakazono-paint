@@ -1,0 +1,62 @@
+<% const path = "/"; %>
+<header class="header u-zi5">
+  <div class="header__inner u-flex u-justify-between u-items-center u-mx-auto">
+    <h1 class="u-flex u-items-center">
+
+      <a class="u-flex u-items-center" href="<%= path %>">
+        <img src="<%= path %>assets/img/common/logo.svg" alt="トップページへ" width="215" height="42" decoding="async">
+      </a>
+
+    </h1>
+
+    <button class="c-menu-button --open u-relative u-none:xl" type="button" aria-label="メニューを開く" data-micromodal-trigger="modal-nav">
+      <img class="c-menu-button__shape" src="<%= path %>assets/img/common/shape5.svg" alt="" width="80" height="80" decoding="async">
+      <span class="c-menu-button__parts --open u-absolute"></span>
+      <span class="c-menu-button__parts --open u-absolute"></span>
+      <span class="c-menu-button__parts --open u-absolute"></span>
+    </button>
+
+    <nav class="header__nav u-block:xl" hidden>
+      <ul class="header__list u-flex u-jusify-center u-items-center">
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>">ホーム</a></li>
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>about/">当店について</a></li>
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>plan/">施工プラン</a></li>
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>works/">施工実績</a></li>
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>faq/">よくある質問</a></li>
+        <li class="u-flex u-items-center"><a class="header__link c-rolling-text u-inline-block js-rolling-text" href="<%= path %>contact/">お問い合せ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="c-modal c-modal-slide" id="modal-nav" aria-hidden="true">
+    <div class="c-modal__overlay u-fixed" tabindex="-1" data-micromodal-close>
+      <div
+        class="c-modal__container u-fixed u-zi10"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-1-title"
+        aria-describedby="modal-1-content"
+      >
+        <img class="c-modal__bg u-absolute" src="<%= path %>assets/img/common/shape5.svg" alt="" width="326" height="326" decoding="async">
+
+        <button class="c-menu-button --close u-fixed u-zi1" aria-label="メニューを閉じる" data-micromodal-close>
+          <span class="c-menu-button__parts --close u-absolute" data-micromodal-close></span>
+          <span class="c-menu-button__parts --close u-absolute" data-micromodal-close></span>
+        </button>
+
+        <nav class="c-nav u-relative">
+          <ul class="c-nav__list u-ml-auto">
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>">ホーム</a></li>
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>about/">当店について</a></li>
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>plan/">施工プラン</a></li>
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>works/">施工実績</a></li>
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>faq/">よくある質問</a></li>
+            <li class="u-flex u-items-center"><a class="c-nav__item c-rolling-text u-inline-block js-rolling-text" href="<%= path %>contact/">お問い合せ</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+</header>

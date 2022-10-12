@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use 'variables' as t;
+
+@mixin responsive($name, $until: false) {
+  // マップ型で定義されていない値が呼び出された時はエラーを返す
+  @if not map.has-key(t.$breakpoints, $name) {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map.keys($breakpoints)}";
+  }
+
+  $breakpoint: map.get(t.$breakpoints, $name);
+
+  @if $breakpoint {
+    @if $until {
+      @media not all and (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin hover {
+  &:focus-visible {
+    @content;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin leading-trim($line-height) {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+
+  &::after {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+@mixin landscape {
+  @media (max-width: 992px) and (max-height: 576px) {
+    @content;
+  }
+}

@@ -1,0 +1,129 @@
+@use '../tool/' as t;
+
+// justify-content
+.u-justify-center {
+  justify-content: center;
+
+  &\:sm { @include t.responsive(sm) { justify-content: center; } }
+  &\:md { @include t.responsive(md) { justify-content: center; } }
+  &\:lg { @include t.responsive(lg) { justify-content: center; } }
+  &\:xl { @include t.responsive(xl) { justify-content: center; } }
+  &\:xxl { @include t.responsive(xxl) { justify-content: center; } }
+}
+
+.u-justify-between {
+  justify-content: space-between;
+
+  &\:sm { @include t.responsive(sm) { justify-content: space-between; } }
+  &\:md { @include t.responsive(md) { justify-content: space-between; } }
+  &\:lg { @include t.responsive(lg) { justify-content: space-between; } }
+  &\:xl { @include t.responsive(xl) { justify-content: space-between; } }
+  &\:xxl { @include t.responsive(xxl) { justify-content: space-between; } }
+}
+
+.u-justify-start {
+  justify-content: flex-start;
+}
+
+.u-justify-end {
+  justify-content: flex-end;
+
+  &\:sm { @include t.responsive(sm) { justify-content: flex-end; } }
+  &\:md { @include t.responsive(md) { justify-content: flex-end; } }
+  &\:lg { @include t.responsive(lg) { justify-content: flex-end; } }
+  &\:xl { @include t.responsive(xl) { justify-content: flex-end; } }
+  &\:xxl { @include t.responsive(xxl) { justify-content: flex-end; } }
+}
+
+// align-items
+.u-items-center {
+  align-items: center;
+
+  &\:sm { @include t.responsive(sm) { align-items: center; } }
+  &\:md { @include t.responsive(md) { align-items: center; } }
+  &\:lg { @include t.responsive(lg) { align-items: center; } }
+  &\:xl { @include t.responsive(xl) { align-items: center; } }
+  &\:xxl { @include t.responsive(xxl) { align-items: center; } }
+}
+
+.u-items-end {
+  align-items: flex-end;
+
+  &\:sm { @include t.responsive(sm) { align-items: flex-end; } }
+  &\:md { @include t.responsive(md) { align-items: flex-end; } }
+  &\:lg { @include t.responsive(lg) { align-items: flex-end; } }
+  &\:xl { @include t.responsive(xl) { align-items: flex-end; } }
+  &\:xxl { @include t.responsive(xxl) { align-items: flex-end; } }
+}
+
+// flex-direction
+.u-column {
+  flex-direction: column;
+
+  &\:sm { @include t.responsive(sm) { flex-direction: column; } }
+  &\:md { @include t.responsive(md) { flex-direction: column; } }
+  &\:lg { @include t.responsive(lg) { flex-direction: column; } }
+  &\:xl { @include t.responsive(xl) { flex-direction: column; } }
+  &\:xxl { @include t.responsive(xxl) { flex-direction: column; } }
+}
+
+.u-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.u-row {
+  flex-direction: row;
+}
+
+.u-row-reverse {
+  flex-direction: row-reverse;
+
+  &\:sm { @include t.responsive(sm) { flex-direction: row-reverse; } }
+  &\:md { @include t.responsive(md) { flex-direction: row-reverse; } }
+  &\:lg { @include t.responsive(lg) { flex-direction: row-reverse; } }
+  &\:xl { @include t.responsive(xl) { flex-direction: row-reverse; } }
+  &\:xxl { @include t.responsive(xxl) { flex-direction: row-reverse; } }
+}
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
+// text-align
+.u-text-right {
+  text-align: right;
+
+  &\:sm { @include t.responsive(sm) { text-align: right; } }
+  &\:md { @include t.responsive(md) { text-align: right; } }
+  &\:lg { @include t.responsive(lg) { text-align: right; } }
+  &\:xl { @include t.responsive(xl) { text-align: right; } }
+  &\:xxl { @include t.responsive(xxl) { text-align: right; } }
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-justify {
+  text-align: justify;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-font-english {
+  font-family: var(--font-english);
+}
+
+.u-weight-700 {
+  font-weight: 700;
+}
+
+.u-vertical-base {
+  vertical-align: baseline;
+}
+
+.u-vertical-middle {
+  vertical-align: middle;
+}

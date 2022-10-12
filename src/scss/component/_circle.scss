@@ -1,0 +1,64 @@
+@use "../tool/" as t;
+
+.c-circle {
+  aspect-ratio: 1;
+  bottom: 3%;
+  right: min(4%, 40px);
+  user-select: none;
+  width: clamp(110px, 40px + 11.67vw, 320px);
+
+  > svg {
+    animation: outer-rotate 40s linear infinite;
+    height: fit-content;
+
+    @keyframes outer-rotate {
+      0% {
+        transform: rotateZ(0deg);
+      }
+
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+  }
+}
+
+.c-circle__icon {
+  width: 76%;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: inner-rotate 48s linear infinite;
+    height: fit-content;
+
+    @keyframes inner-rotate {
+      0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotateZ(-360deg);
+      }
+    }
+}
+
+.c-circle__arrow {
+  height: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-A) var(--easing-hover);
+  width: 20%;
+
+  @at-root {
+    .c-circle {
+      @include t.hover {
+        .c-circle__arrow {
+          transform: translate(-50%, -35%);
+        }
+      }
+    }
+  }
+}

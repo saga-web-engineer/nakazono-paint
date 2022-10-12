@@ -1,0 +1,121 @@
+@use '../tool/' as t;
+
+.p-form {
+  background-color: var(--white-color-secondary);
+  color: var(--black-color-primary);
+  padding: 3em clamp(1em, 3.94vw, 60px);
+}
+
+.p-form__required {
+  background-color: var(--pink-color-secondary);
+  border-radius: 3px;
+  color: var(--white-color-primary);
+  font-size: 0.75em;
+  padding: 0.35em 0.6em;
+  vertical-align: 2px;
+}
+
+.p-form__label {
+  font-size: t.rem(16px);
+}
+
+.p-form__input {
+  appearance: none;
+  border: solid 1px var(--white-color-tertiary);
+  font-size: t.rem(16px);
+  height: 3.125em;
+  line-height: 3.125;
+  overflow: hidden;
+  padding: 0 1em;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s var(--easing-hover);
+  width: 100%;
+
+  @include t.responsive(md) {
+    font-size: t.rem(18px);
+  }
+
+  &::placeholder {
+    font-family: var(--font-mincho);
+  }
+}
+
+.p-form__textarea {
+  appearance: none;
+  border: solid 1px var(--white-color-tertiary);
+  font-size: t.rem(16px);
+  height: min(33.33vw, 200px);
+  padding: 1em;
+  width: 100%;
+
+  @include t.responsive(md) {
+    font-size: t.rem(18px);
+  }
+
+  &:valid {
+    border: solid 1px var(--green-color-primary);
+  }
+}
+
+.p-form__disabled {
+  color: var(--red-color-primary);
+
+  @at-root {
+    #submit:disabled + & {
+      display: block;
+    }
+  }
+}
+
+.p-form__valid {
+  color: var(--green-color-primary);
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @at-root {
+    input:valid ~ & {
+      display: block;
+    }
+  }
+}
+
+.p-form__invalid {
+  color: var(--red-color-primary);
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @at-root {
+    input:not(:placeholder-shown) ~ & {
+      display: block;
+    }
+
+    input:valid ~ & {
+      display: none;
+    }
+  }
+
+  &.--text {
+    bottom: -2em;
+    font-size: 0.95em;
+    left: 0;
+    top: auto;
+    transform: none;
+    white-space: nowrap;
+  }
+}
+
+input.--required {
+  &:valid {
+    border: solid 1px var(--green-color-primary);
+  }
+
+  &:invalid {
+    border: solid 1px var(--red-color-primary);
+  }
+
+  &:placeholder-shown {
+    border: solid 1px var(--white-color-tertiary);
+  }
+}

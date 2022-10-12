@@ -1,0 +1,87 @@
+@use '../tool/' as t;
+
+// margin-top
+.u-mt0 {
+  margin-top: 0;
+
+  &\:md {
+    @include t.responsive(md) {
+      margin-top: 0;
+    }
+  }
+
+  &\:lg {
+    @include t.responsive(lg) {
+      margin-top: 0;
+    }
+  }
+}
+
+.u-mt-auto {
+  margin-top: auto;
+
+  &\:lg {
+    @include t.responsive(lg) {
+      margin-top: auto;
+    }
+  }
+}
+
+// margin-left
+.u-ml-auto {
+  margin-left: auto;
+}
+
+.u-ml-full {
+  margin-left: calc(50% - 50vw);
+}
+
+// margin-right
+.u-mr-full {
+  margin-right: calc(50% - 50vw);
+}
+
+// margin-inline
+.u-mx-0 {
+  margin-inline: 0;
+
+  &\:md {
+    @include t.responsive(md) {
+      margin-inline: 0;
+    }
+  }
+
+  &\:lg {
+    @include t.responsive(lg) {
+      margin-inline: 0;
+    }
+  }
+}
+
+.u-mx-auto {
+  margin-inline: auto;
+
+  &\:md {
+    @include t.responsive(md) {
+      margin-inline: auto;
+    }
+  }
+}
+
+.u-mx-full {
+  margin-inline: calc(50% - 50vw);
+
+  &\:md {@include t.responsive(md) { margin-inline: calc(50% - 50vw); }}
+  &\:lg {@include t.responsive(lg) { margin-inline: calc(50% - 50vw); }}
+}
+
+// margin-block
+.u-my-auto {
+  margin-block: auto;
+
+  &\:lg {
+    @include t.responsive(lg) {
+      margin-block: auto;
+    }
+  }
+}

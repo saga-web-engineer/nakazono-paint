@@ -1,0 +1,30 @@
+@use "../tool/" as t;
+
+.c-rolling-text {
+  font-size: var(--font-size);
+  padding-inline: 0.25em;
+  height: calc(var(--font-size) * 1.5);
+  line-height: calc(var(--font-size) * 1.5);
+  overflow: hidden;
+
+  @include t.hover {
+    .js-text-letter {
+      transform: translateY(-100%);
+    }
+  }
+
+  .js-text-wrapper:last-child {
+    color: var(--active-color);
+  }
+
+  .js-text-letter {
+    display: inline-block;
+    transition: transform var(--duration-A) var(--easing-text);
+  }
+}
+
+@for $i from 0 through 6 {
+  .js-text-letter:nth-child(#{$i + 1}) {
+    transition-delay: 0.015s * $i;
+  }
+}
