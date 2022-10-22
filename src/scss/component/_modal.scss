@@ -9,13 +9,13 @@
 }
 
 .c-modal__overlay {
-  background-color: var(--overlay-color);
+  background-color: var(--shadow-color);
   inset: 0;
   margin: 0;
 
   @at-root {
     .c-modal-slide[aria-hidden='false'] & {
-      animation: overlay-fadein var(--duration-B) var(--easing-faded);
+      animation: overlay-fadein var(--duration-secondary) var(--easing-faded);
 
       @keyframes overlay-fadein {
         from {
@@ -29,7 +29,7 @@
     }
 
     .c-modal-slide[aria-hidden='true'] & {
-      animation: overlay-fadeout var(--duration-B) var(--easing-faded);
+      animation: overlay-fadeout var(--duration-secondary) var(--easing-faded);
 
       @keyframes overlay-fadeout {
         from {
@@ -45,7 +45,7 @@
 }
 
 .c-modal__container {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 33 / 46;
   border-radius: 50%;
   right: 0;
   top: 0;
@@ -54,7 +54,7 @@
 
   @at-root {
     .c-modal-slide[aria-hidden='false'] & {
-      animation: modal-slidein var(--duration-A) var(--easing-faded);
+      animation: modal-slidein var(--duration-primary) var(--easing-faded);
 
       @keyframes modal-slidein {
         from {
@@ -68,7 +68,7 @@
     }
 
     .c-modal-slide[aria-hidden='true'] & {
-      animation: modal-slideout var(--duration-A) var(--easing-faded);
+      animation: modal-slideout var(--duration-primary) var(--easing-faded);
 
       @keyframes modal-slideout {
         from {
@@ -87,5 +87,5 @@
   pointer-events: none;
   right: -60px;
   top: -10px;
-  transform: scale(1.8, 2.6);
+  transform: scale(1.9, 2.6);
 }

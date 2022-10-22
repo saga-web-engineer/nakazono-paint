@@ -4,27 +4,18 @@
 .u-mt0 {
   margin-top: 0;
 
-  &\:md {
-    @include t.responsive(md) {
-      margin-top: 0;
-    }
-  }
+  &\:md {@include t.responsive(md) { margin-top: 0; }}
+  &\:lg {@include t.responsive(lg) { margin-top: 0; }}
+}
 
-  &\:lg {
-    @include t.responsive(lg) {
-      margin-top: 0;
-    }
-  }
+.u-mt2em {
+  margin-top: 2em;
 }
 
 .u-mt-auto {
   margin-top: auto;
 
-  &\:lg {
-    @include t.responsive(lg) {
-      margin-top: auto;
-    }
-  }
+  &\:lg {@include t.responsive(lg) { margin-top: auto; }}
 }
 
 // margin-left
@@ -45,17 +36,8 @@
 .u-mx-0 {
   margin-inline: 0;
 
-  &\:md {
-    @include t.responsive(md) {
-      margin-inline: 0;
-    }
-  }
-
-  &\:lg {
-    @include t.responsive(lg) {
-      margin-inline: 0;
-    }
-  }
+  &\:md {@include t.responsive(md) { margin-inline: 0; }}
+  &\:lg {@include t.responsive(lg) { margin-inline: 0; }}
 }
 
 .u-mx-auto {
@@ -79,9 +61,5 @@
 .u-my-auto {
   margin-block: auto;
 
-  &\:lg {
-    @include t.responsive(lg) {
-      margin-block: auto;
-    }
-  }
+  &\:lg {@include t.responsive(lg) { margin-block: auto; }}
 }

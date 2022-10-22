@@ -209,7 +209,7 @@
 .p-top-plan__list {
   display: grid;
   gap: 40px 0;
-  padding: min(11.11vw, 120px) 0 min(16.67vw, 80px) 0;
+  padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
 
   @include t.responsive(lg) {
     grid-template-columns: repeat(2, 1fr);
@@ -257,3 +257,8 @@
 .p-top-plan__price {
   font-size: clamp(t.rem(20px), 10px + 2.17vw, t.rem(36px));
 }
+
+// works
+// .p-top-works {
+
+// }

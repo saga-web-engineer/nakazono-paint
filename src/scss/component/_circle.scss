@@ -48,7 +48,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: transform var(--duration-A) var(--easing-hover);
+  transition: transform var(--duration-primary) var(--easing-hover);
   width: 20%;
 
   @at-root {

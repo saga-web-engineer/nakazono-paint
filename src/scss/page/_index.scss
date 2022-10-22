@@ -1,20 +1,8 @@
 // top
 @use 'top';
 
-// メインビジュアルのスタイル
-@use 'mv';
-
 // アバウトページのスタイル
 @use 'about';
-
-// 当店の特徴のスタイル
-@use 'characteristic';
-
-// プロダクトページのスタイル
-@use 'product';
-
-// インフォメーションページのスタイル
-@use 'info';
 
 // よくある質問
 @use 'faq';

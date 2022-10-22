@@ -1,47 +1,62 @@
 @use '../tool/' as t;
 
-.c-card {
+.c-cards {
   display: grid;
-  grid-gap: min(2.78vw, 30px);
-  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(10px, 2.93vw, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 29.29vw, 410px), 1fr));
+  padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
+}
 
-  // grid-template-columns: repeat(auto-fill, minmax(min(42.22vw, 335px), 1fr));
+.c-card__inner {
+  --inner: 12px;
+  --space: 8px;
 
-  @include t.responsive(lg) {
-    grid-template-columns: repeat(3, 1fr);
+  border: solid 1px var(--gray-color-primary);
+  border-radius: calc(var(--inner) + var(--space));
+  display: block;
+  height: 100%;
+  padding: var(--space) var(--space) calc(var(--space) * 2);
+  transition: transform var(--duration-secondary) var(--easing-hover), box-shadow var(--duration-secondary) var(--easing-hover);
+  width: 100%;
+
+  @include t.hover {
+    box-shadow: 0 0 30px -6px var(--shadow-color);
+    transform: translateY(-10px);
   }
 }
 
 .c-card__thumb {
-  img {
-    width: 100vw;
+  border-radius: var(--inner);
+  max-height: 390px;
+  object-fit: cover;
+  width: 100vw;
+
+  @include t.responsive(sm) {
+    max-height: 290px;
   }
 }
 
 .c-card__content {
-  background-color: var(--white-color-quaternary);
-  color: var(--black-color-primary);
-  padding: min(1.74vw, 20px) min(1.74vw, 20px) min(2.78vw, 30px);
-
-  @include t.responsive(xxl) {
-    padding-bottom: min(3.14vw, 60px);
-  }
+  padding: 6px var(--space) 0;
 }
 
 .c-card__title {
-  text-indent: max(-1.11vw, -8px);
-
-  &::before {
-    content: '【';
-  }
-
-  &::after {
-    content: '】';
-  }
+  font-size: 1.2em;
+  padding-block: 0.25em;
 }
 
-.c-card__text {
-  &::before {
-    content: '￥';
+.c-card__tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  span {
+    background-color: var(--main-color);
+    border-radius: 6px;
+    color: var(--base-color);
+    line-height: 1.5;
+    padding-inline: 0.25em;
+    white-space: nowrap;
   }
 }

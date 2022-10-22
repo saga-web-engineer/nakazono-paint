@@ -1,0 +1,51 @@
+@use '../tool/' as t;
+
+.c-cta {
+  --pt: clamp(30px, 15px + 3.26vw, 40px);
+  --gradation-blue-primary: rgb(5 176 255 / 10%);
+  --gradation-blue-secondary: rgb(5 176 255 / 20%);
+
+  background: linear-gradient(180deg, var(--base-color) 10%, var(--gradation-blue-primary) 50%, var(--gradation-blue-secondary));
+}
+
+.c-cta__outer {
+  padding-block: clamp(60px, 30px + 5vw, 100px);
+}
+
+.c-cta__heading {
+  align-items: center;
+  color: var(--main-color);
+  display: flex;
+  font-family: var(--font-english);
+  font-size: clamp(#{t.rem(74px)}, 36px + 6.71vw, #{t.rem(120px)});
+  justify-content: center;
+  line-height: 1;
+}
+
+.c-cta__container {
+  padding-top: var(--pt);
+}
+
+.c-cta__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 10px + 2.6vw, 30px);
+  padding-top: var(--pt);
+
+  @include t.responsive(lg) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.c-cta__img {
+  bottom: 4px;
+  width: clamp(100px, 50px + 26.56vw, 254px);
+
+  @include t.responsive(lg) {
+    bottom: auto;
+    left: clamp(0px, 4.14vw - 30px, 63px);
+    top: clamp(215px, 107px + 10.93vw, 260px);
+  }
+}

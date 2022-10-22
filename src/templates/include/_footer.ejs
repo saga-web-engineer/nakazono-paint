@@ -1,2 +1,67 @@
 <% const path = "/"; %>
-<footer></footer>
+<footer class="footer">
+
+  <div class="c-cta">
+    <div class="c-wrapper">
+      <div class="c-cta__outer u-relative">
+        <p class="c-cta__heading">Contact</p>
+        <div class="c-cta__img u-absolute">
+          <img src="<%= path %>assets/img/common/cta.svg" alt="" width="300" height="" decoding="async" loading="lazy">
+        </div>
+        <div class="c-cta__container u-relative">
+          <p class="u-text-center">
+            お見積り・住まいのことなら<br>何でもご相談ください。<br>当店は<span>お見積り無料</span>となっております。
+          </p>
+          <div class="c-cta__inner">
+            <a class="c-button --tel" href="tel:#">
+              <span class="u-flex u-justify-center u-items-center">お電話でお問い合せ(平日9:00-17:00)</span>
+              <span class="u-flex u-justify-center u-items-center">
+                <img src="<%= path %>assets/img/common/tel.png" alt="" width="24" height="" decoding="async" loading="lazy">0000-00-0000
+              </span>
+            </a>
+            <a class="c-button --mail" href="<%= path %>contact">
+              <img src="<%= path %>assets/img/common/mail.png" alt="" width="35" height="" decoding="async" loading="lazy">お問い合せフォーム
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__outer">
+    <div class="c-wrapper">
+      <div class="u-flex:xl u-justify-between:xl u-items-start:xl">
+        <div class="u-text-center">
+          <a href="<%= path %>"><img src="<%= path %>assets/img/common/logo.svg" alt="トップページへ" width="215" height="42" decoding="async"></a>
+        </div>
+        <div class="footer__container">
+          <ul class="footer__list u-mx-auto">
+            <li class="footer__item"><a class="footer__link" href="<%= path %>">ホーム</a></li>
+            <li class="footer__item"><a class="footer__link" href="<%= path %>about/">当店について</a></li>
+            <li class="footer__item"><a class="footer__link" href="<%= path %>plan/">施工プラン</a></li>
+            <li class="footer__item"><a class="footer__link" href="<%= path %>works/">施工実績</a></li>
+            <li class="footer__item"><a class="footer__link" href="<%= path %>faq/">よくある質問</a></li>
+            <li class="footer__item"><a class="footer__link" href="<%= path %>contact/">お問い合せ</a></li>
+          </ul>
+          <div class="footer__inner">
+            <ul class="footer__sns">
+              <li>
+                <a href="">
+                  <img src="<%= path %>assets/img/common/icon1.png" alt="中園塗装店のfacebookページはこちら" width="20" height="" decoding="async" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="<%= path %>assets/img/common/icon2.png" alt="中園塗装店のInstagramページはこちら" width="20" height="" decoding="async" loading="lazy">
+                </a>
+              </li>
+            </ul>
+            <div class="u-text-center">
+              <small lang="en" translate="no">&copy; 2022 Nakazono Paint</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

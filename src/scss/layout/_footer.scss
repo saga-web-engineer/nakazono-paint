@@ -1,53 +1,76 @@
 @use '../tool/' as t;
 
 .footer {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 60px 40px 20px;
-  width: 100%;
+  padding-top: clamp(90px, 30px + 9.29vw, 160px);
+}
 
-  @include t.responsive(md) {
-    padding: 80px min(5.21vw, 80px) 80px min(10.1vw, 160px);
+.footer__outer {
+  background-color: var(--gray-color-tertiary);
+  padding: 40px 0 20px;
+
+  @include t.responsive(xl) {
+    padding-bottom: clamp(90px, 15px + 6.51vw, 140px);
   }
 }
 
 .footer__container {
-  @include t.responsive(lg) {
-    width: min(80%, 1200px);
-  }
-}
-
-.footer__menu {
-  font-size: clamp(#{t.rem(14px)}, 2.78vw, #{t.rem(22px)});
-  width: fit-content;
-}
-
-.footer__item {
-  transition: opacity 0.2s, transform 0.2s var(--easing-hover);
-
-  @include t.hover {
-    opacity: 0.6;
-    transform: translateX(4px);
-  }
-
-  &::before {
-    background-color: var(--white-color-primary);
-    content: '';
-    height: 1px;
-    margin-right: 8px;
-    width: 10px;
-
-    @include t.responsive(lg) {
-      width: 24px;
-    }
+  @include t.responsive(xl) {
+    width: min(100%, 880px);
   }
 }
 
 .footer__inner {
-  max-width: 560px;
+  @include t.responsive(xl) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+}
+
+.footer__list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  padding: 40px 30px;
+  place-items: center;
+
+  @include t.responsive(xl) {
+    border-bottom: solid 1px var(--gray-color-secondary);
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0 30px;
+  }
+}
+
+.footer__item {
+  width: fit-content;
 }
 
 .footer__link {
-  gap: 1em;
+  transition: opacity var(--duration-secondary) var(--easing-hover);
+
+  @include t.hover {
+    opacity: 0.7;
+  }
+}
+
+.footer__sns {
+  align-items: center;
+  display: flex;
+  gap: clamp(16px, 8px + 2.67vw, 40px);
+  justify-content: center;
+  padding-bottom: 20px;
+
+  @include t.responsive(xl) {
+    padding-bottom: 0;
+  }
+
+  a {
+    transition: opacity var(--duration-secondary) var(--easing-hover);
+
+    @include t.hover {
+      opacity: 0.7;
+    }
+  }
 }

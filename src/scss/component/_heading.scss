@@ -3,7 +3,7 @@
 .c-heading {
   align-items: center;
   display: flex;
-  font-size: clamp(#{t.rem(28px)}, 3.83vw, #{t.rem(48px)});
+  font-size: clamp(#{t.rem(28px)}, 14px + 2.83vw, #{t.rem(48px)});
   justify-content: center;
   position: relative;
 
@@ -12,7 +12,7 @@
     color: var(--white-color-primary);
     content: attr(data-english);
     font-family: var(--font-english);
-    font-size: clamp(#{t.rem(120px)}, 27.78vw, #{t.rem(360px)});
+    font-size: clamp(#{t.rem(120px)}, 60px + 18.75vw, #{t.rem(360px)});
     left: 0;
     line-height: 0.8;
     position: absolute;

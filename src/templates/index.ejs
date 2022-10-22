@@ -25,7 +25,7 @@
           <img class="p-top-mv__accessory u-block u-mx-auto" src="<%= path %>assets/img/top/mv-b.png" alt="" width="1200" height="1695" decoding="async">
           <h1 class="p-top-mv__copy u-absolute">佐賀で一番、<br>頼れる塗装屋。</h1>
 
-          <a class="c-circle u-absolute u-flex u-justify-center" href="#about">
+          <a class="c-circle u-absolute u-flex u-justify-center" href="#top-about">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400" width="400" height="400">
               <defs>
                 <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path"></path>
@@ -43,7 +43,7 @@
           </a>
 
         </div>
-        <div class="p-top-mv__shape u-block:lg u-absolute" hidden>
+        <div class="p-top-mv__shape u-block:lg u-absolute u-zi-1" hidden>
           <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape7.svg" alt="" width="400" height="400" decoding="async"></div>
           <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape1.svg" alt="" width="260" height="260" decoding="async"></div>
           <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape4.svg" alt="" width="300" height="300" decoding="async"></div>
@@ -142,7 +142,8 @@
             </li>
             <% }); %>
           </ul>
-          <a class="c-button-wave u-mx-auto" href="<%= path %>about/">
+          <p class="u-text-center:xl">中園塗装店の主な施工の料金目安です。この他にも光触媒コーティングや家具類の塗装も行っております。</p>
+          <a class="c-button-wave u-mt2em u-mx-auto" href="<%= path %>plan/">
             <div class="c-button-wave__effect"></div>
             <span class="u-relative">詳しく見てみる</span>
           </a>
@@ -152,6 +153,40 @@
       <section class="p-top-works">
         <div class="c-wrapper">
           <h2 class="c-heading" id="top-works" data-english="Works">施工事例</h2>
+          <ul class="c-cards">
+            <%
+              const worksList = [
+                {
+                  title: "佐賀県鳥栖市　U邸",
+                  tags: '<span>外壁塗装</span><span>屋根塗装</span>',
+                },
+                {
+                  title: "佐賀県佐賀市　H邸",
+                  tags: '<span>外壁塗装</span><span>屋根塗装</span><span>光触媒コーティング</span>',
+                },
+                {
+                  title: "福岡県柳川市　Iアパート",
+                  tags: '<span>外壁塗装</span><span>屋根塗装</span><span>防水工事</span>',
+                },
+              ];
+
+              worksList.forEach((value, index) => {
+            %>
+            <li class="c-card">
+              <a class="c-card__inner" href="#">
+                <img class="c-card__thumb" src="<%= path %>assets/img/works/works<%= index + 1 %>.jpg" alt="" width="370" height="280" decoding="async">
+                <div class="c-card__content">
+                  <h3 class="c-card__title"><%= value.title %></h3>
+                  <div class="c-card__tags"><%- value.tags %></div>
+                </div>
+              </a>
+            </li>
+            <% }); %>
+          </ul>
+          <a class="c-button-wave u-mx-auto" href="<%= path %>works/">
+            <div class="c-button-wave__effect"></div>
+            <span class="u-relative">詳しく見てみる</span>
+          </a>
         </div>
       </section><!-- works -->
     </main>

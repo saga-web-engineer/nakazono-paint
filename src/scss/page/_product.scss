@@ -1,7 +1,0 @@
-@use '../tool/' as t;
-
-.p-product__text {
-  @include t.responsive(md) {
-    width: fit-content;
-  }
-}

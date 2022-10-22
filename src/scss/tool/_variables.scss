@@ -14,13 +14,12 @@ $breakpoints: (
   --base-color: #fff;
   --main-color: #007aff;
   --text-color: #625a5a;
-  --overlay-color: rgba(0, 0, 0, 0.7);
+  --shadow-color: rgba(0, 0, 0, 0.7);
   --header-color: rgba(255, 255, 255, 0.4);
-  --wave-color-primary: rgba(255, 255, 255, 0.7);
-  --wave-color-secondary: rgba(255, 255, 255, 0.5);
   --white-color-primary: #f0f8f8;
   --gray-color-primary: #eff2f6;
   --gray-color-secondary: #bbb;
+  --gray-color-tertiary: #e0e3e7;
   --blue-color-primary: #29abe2;
   --red-color-primary: #f72f47;
   --green-color-primary: #44c08a;
@@ -37,6 +36,6 @@ $breakpoints: (
   --easing-overlay: cubic-bezier(0.39, 0.575, 0.565, 1);
 
   // duration
-  --duration-A: 0.6s;
-  --duration-B: 0.3s;
+  --duration-primary: 0.6s;
+  --duration-secondary: 0.3s;
 }
