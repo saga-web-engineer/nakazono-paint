@@ -1,0 +1,19 @@
+<% const path = "/"; %>
+<div class="c-modal c-modal-slide" id="modal-nav" aria-hidden="true">
+  <div class="c-modal__overlay u-fixed" tabindex="-1" data-micromodal-close>
+    <div
+      class="c-modal__container u-fixed u-zi10"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-1-title"
+      aria-describedby="modal-1-content"
+    >
+      <img class="c-modal__bg u-absolute" src="<%= path %>assets/img/common/shape5.svg" alt="" width="326" height="326" decoding="async">
+      <button class="c-menu-button --close u-fixed u-zi1" aria-label="メニューを閉じる" data-micromodal-close>
+        <span class="c-menu-button__parts --close u-absolute" data-micromodal-close></span>
+        <span class="c-menu-button__parts --close u-absolute" data-micromodal-close></span>
+      </button>
+      <%- include('./_nav') %>
+    </div>
+  </div>
+</div>

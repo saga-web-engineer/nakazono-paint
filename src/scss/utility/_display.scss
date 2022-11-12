@@ -30,6 +30,16 @@
   &\:xxl { @include t.responsive(xxl) { display: none; } }
 }
 
+.u-grid {
+  display: grid;
+
+  &\:sm { @include t.responsive(sm) { display: grid; } }
+  &\:md { @include t.responsive(md) { display: grid; } }
+  &\:lg { @include t.responsive(lg) { display: grid; } }
+  &\:xl { @include t.responsive(xl) { display: grid; } }
+  &\:xxl { @include t.responsive(xxl) { display: grid; } }
+}
+
 .u-contents {
   display: contents;
 }

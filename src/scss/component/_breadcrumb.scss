@@ -1,0 +1,26 @@
+@use '../tool/' as t;
+
+.c-breadcrumb__item {
+  &:last-of-type {
+    text-decoration-color: var(--text-color);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  &:not(:last-child)::after {
+    color: var(--main-color);
+    content: '▶';
+    font-size: 0.9em;
+    margin: 0 1em;
+  }
+}
+
+.c-breadcrumb__link {
+  transition: color var(--duration-secondary) var(--easing-hover);
+
+  @include t.hover {
+    color: var(--main-color);
+  }
+}

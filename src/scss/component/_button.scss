@@ -1,14 +1,11 @@
 @use '../tool/' as t;
 
 .c-button {
-  align-items: center;
   background-color: var(--main-color);
   border: solid 1px var(--main-color);
   border-radius: 4px;
   color: var(--white-color-primary);
-  display: flex;
   font-size: clamp(t.rem(18px), 9px + 1.69vw, t.rem(22px));
-  justify-content: center;
   transition: background-color var(--duration-secondary), color var(--duration-secondary) var(--easing-hover);
   width: min(88vw, 380px);
 
@@ -29,7 +26,6 @@
   &.--tel {
     background-color: var(--base-color);
     color: var(--text-color);
-    display: block;
     padding-block: clamp(12px, 6px + 1.56vw, 18px);
 
     @include t.hover {
@@ -37,7 +33,7 @@
       color: var(--base-color);
     }
 
-    span {
+    > span {
       &:first-of-type {
         font-size: 0.7em;
         line-height: 1;
@@ -46,11 +42,6 @@
       &:last-of-type {
         font-size: clamp(t.rem(28px), 14px + 2.73vw, t.rem(35px));
         line-height: 1;
-      }
-
-      img {
-        margin: 4px 0.25em 0 0;
-        width: clamp(13px, 6px + 1.3vw, 16px);
       }
     }
   }
@@ -73,16 +64,12 @@
   --wave-color-primary: rgb(255 255 255 / 70%);
   --wave-color-secondary: rgb(255 255 255 / 50%);
 
-  align-items: center;
   background-color: transparent;
   border-radius: 9999px;
   color: var(--base-color);
-  display: flex;
   font-size: clamp(t.rem(18px), 9px + 1.69vw, t.rem(22px));
-  justify-content: center;
   overflow: hidden;
   padding-block: clamp(12px, 6px + 1.56vw, 18px);
-  position: relative;
   text-shadow: 0 0 2px var(--main-color);
   width: min(90%, 360px);
 }
@@ -91,7 +78,6 @@
   background: linear-gradient(45deg, var(--main-color), var(--blue-color-primary));
   height: 250px;
   left: 0;
-  position: absolute;
   top: max(-21.11vw, -100px);
   width: 100%;
 

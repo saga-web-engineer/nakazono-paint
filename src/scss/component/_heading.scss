@@ -1,11 +1,7 @@
 @use '../tool/' as t;
 
 .c-heading {
-  align-items: center;
-  display: flex;
   font-size: clamp(#{t.rem(28px)}, 14px + 2.83vw, #{t.rem(48px)});
-  justify-content: center;
-  position: relative;
 
   &::before {
     bottom: 0;
@@ -17,5 +13,27 @@
     line-height: 0.8;
     position: absolute;
     z-index: -1;
+  }
+}
+
+.c-heading-secondary {
+  font-size: clamp(t.rem(26px), t.rem(13px) + 2.36vw, t.rem(46px));
+  padding-bottom: clamp(20px, 5.86vw, 60px);
+
+  &::before {
+    color: var(--main-color);
+    content: attr(data-en);
+    display: block;
+    font-family: var(--font-english);
+    font-size: clamp(t.rem(28px), t.rem(14px) + 2.29vw, t.rem(46px));
+    line-height: 1;
+  }
+
+  &::after {
+    background-color: var(--main-color);
+    content: '';
+    height: clamp(20px, 10px + 2.14vw, 40px);
+    transform: rotate(25deg);
+    width: 1px;
   }
 }

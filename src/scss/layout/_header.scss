@@ -3,7 +3,6 @@
 .header {
   background-color: transparent;
   left: 0;
-  position: sticky;
   top: 0;
 
   @include t.responsive(xl) {
@@ -19,10 +18,6 @@
     padding-block: 19px;
   }
 }
-
-// .header__nav {
-
-// }
 
 .header__list {
   gap: 1.25em;

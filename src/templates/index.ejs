@@ -1,8 +1,8 @@
 <%
   const meta = {
-    title: '中園塗装 | ',
-    description: '',
-    url: '',
+    title: '中園塗装 | 佐賀県で一番頼れる塗装屋',
+    description: '中園塗装店は佐賀県鳥栖市を中心とした地域密着型の塗装店です。塗装業務の他に、各種取次業務も行っており、住まいのことなら安心して何でもご相談いただけます。鳥栖市以外にお住まいの方もお気軽にご相談ください。',
+    url: 'https://nakazono-paint.netlify.app',
   };
 %>
 <% const path = "/"; %>
@@ -15,7 +15,7 @@
 <body>
   <div class="layout">
     <%- include('include/_header') %>
-    <main class="main">
+    <main class="p-top u-flex u-column">
       <!-- mv -->
       <section class="p-top-mv u-flex:lg u-column:lg u-relative:lg">
         <div class="p-top-mv__wrapper u-relative">
@@ -24,7 +24,6 @@
           </div>
           <img class="p-top-mv__accessory u-block u-mx-auto" src="<%= path %>assets/img/top/mv-b.png" alt="" width="1200" height="1695" decoding="async">
           <h1 class="p-top-mv__copy u-absolute">佐賀で一番、<br>頼れる塗装屋。</h1>
-
           <a class="c-circle u-absolute u-flex u-justify-center" href="#top-about">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400" width="400" height="400">
               <defs>
@@ -41,7 +40,6 @@
               </svg>
             </div>
           </a>
-
         </div>
         <div class="p-top-mv__shape u-block:lg u-absolute u-zi-1" hidden>
           <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape7.svg" alt="" width="400" height="400" decoding="async"></div>
@@ -49,24 +47,21 @@
           <div class="u-absolute js-parallax"><img src="<%= path %>assets/img/common/shape4.svg" alt="" width="300" height="300" decoding="async"></div>
         </div>
         <div class="p-top-mv__slider u-flex:lg u-mt-auto:lg" hidden>
-
           <div class="c-slider u-flex">
             <% for (let i = 0; i < 2; i++) { %>
             <ul class="c-slider__list u-flex">
               <% for (let i = 0; i < 3; i++) { %>
               <li class="c-slider__slide"><span>Welcome</span><span>to</span><span>Nakazono</span><span>Paint.</span></li>
-              <% } %>
+              <% }; %>
             </ul>
-            <% } %>
+            <% }; %>
           </div>
-
         </div>
-
       </section><!-- //mv -->
       <!-- about -->
       <section class="p-top-about">
-        <div class="c-wrapper">
-          <h2 class="c-heading" id="top-about" data-english="About">当店について</h2>
+        <div class="c-wrapper u-mx-auto">
+          <h2 class="c-heading u-flex u-justify-center u-items-center u-relative" id="top-about" data-english="About">当店について</h2>
           <div class="p-top-about__container u-relative:lg u-mx-full:lg">
             <div class="p-top-about__image u-ml-full u-relative:lg js-parallax">
               <img src="<%= path %>assets/img/top/about1.jpg" alt="" width="960" height="1460" decoding="async">
@@ -84,8 +79,8 @@
               <p>
                 私たちは塗装業だけにとどまらず、<br>住まいのことなら<br class="u-none:sm">何でも相談でき、解決できる<br>佐賀で一番頼れる塗装店をめざしています。
               </p>
-              <a class="c-button-wave" href="<%= path %>about/">
-                <div class="c-button-wave__effect"></div>
+              <a class="c-button-wave u-flex u-justify-center u-items-center u-relative" href="<%= path %>about/">
+                <div class="c-button-wave__effect u-absolute"></div>
                 <span class="u-relative">詳しく見てみる</span>
               </a>
             </div>
@@ -101,9 +96,9 @@
       <!-- //about -->
       <!-- plan -->
       <section class="p-top-plan">
-        <div class="c-wrapper">
-          <h2 class="c-heading" id="top-plan" data-english="Plan">施工プラン</h2>
-          <ul class="p-top-plan__list">
+        <div class="c-wrapper u-mx-auto">
+          <h2 class="c-heading u-flex u-justify-center u-items-center u-relative" id="top-plan" data-english="Plan">施工プラン</h2>
+          <ul class="p-top-plan__list u-grid">
             <%
               const plan = [
                 {
@@ -114,8 +109,8 @@
                 },
                 {
                   name: '内装、室内塗装料金',
-                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生費、消費税込み、2回塗り）',
-                  price: '￥1,100 ~ ￥1,650',
+                  detail: '1平方メートルあたりの塗装料金<br>（塗料代、工賃、養生費、消費税込み、3回塗り）',
+                  price: '￥1,650 ~ ￥2,100',
                   note: '※塗料によって金額が異なります'
                 },
                 {
@@ -134,7 +129,7 @@
 
               plan.forEach((value, index) => {
             %>
-            <li class="p-top-plan__item u-text-center">
+            <li class="p-top-plan__item u-grid u-text-center u-relative:lg">
               <h3 class="p-top-plan__plan"><%= value.name %></h3>
               <p><%- value.detail %></p>
               <p class="p-top-plan__price"><%= value.price %></p>
@@ -143,17 +138,17 @@
             <% }); %>
           </ul>
           <p class="u-text-center:xl">中園塗装店の主な施工の料金目安です。この他にも光触媒コーティングや家具類の塗装も行っております。</p>
-          <a class="c-button-wave u-mt2em u-mx-auto" href="<%= path %>plan/">
-            <div class="c-button-wave__effect"></div>
+          <a class="c-button-wave u-flex u-justify-center u-items-center u-relative u-mt2em u-mx-auto" href="<%= path %>plan/">
+            <div class="c-button-wave__effect u-absolute"></div>
             <span class="u-relative">詳しく見てみる</span>
           </a>
         </div>
       </section><!-- //plan -->
       <!-- works -->
       <section class="p-top-works">
-        <div class="c-wrapper">
-          <h2 class="c-heading" id="top-works" data-english="Works">施工事例</h2>
-          <ul class="c-cards">
+        <div class="c-wrapper u-mx-auto">
+          <h2 class="c-heading u-flex u-justify-center u-items-center u-relative" id="top-works" data-english="Works">施工事例</h2>
+          <ul class="c-cards u-grid">
             <%
               const worksList = [
                 {
@@ -173,22 +168,22 @@
               worksList.forEach((value, index) => {
             %>
             <li class="c-card">
-              <a class="c-card__inner" href="#">
+              <a class="c-card__inner u-block" href="#">
                 <img class="c-card__thumb" src="<%= path %>assets/img/works/works<%= index + 1 %>.jpg" alt="" width="370" height="280" decoding="async">
                 <div class="c-card__content">
                   <h3 class="c-card__title"><%= value.title %></h3>
-                  <div class="c-card__tags"><%- value.tags %></div>
+                  <div class="c-card__tags u-flex u-items-center u-flex-wrap"><%- value.tags %></div>
                 </div>
               </a>
             </li>
             <% }); %>
           </ul>
-          <a class="c-button-wave u-mx-auto" href="<%= path %>works/">
-            <div class="c-button-wave__effect"></div>
+          <a class="c-button-wave u-flex u-justify-center u-items-center u-relative u-mx-auto" href="<%= path %>works/">
+            <div class="c-button-wave__effect u-absolute"></div>
             <span class="u-relative">詳しく見てみる</span>
           </a>
         </div>
-      </section><!-- works -->
+      </section><!-- //works -->
     </main>
     <%- include('include/_footer') %>
   </div>

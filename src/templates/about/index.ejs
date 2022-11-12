@@ -1,0 +1,192 @@
+<%
+  const meta = {
+    title: '当店について | 中園塗装',
+    description: '中園塗装店は佐賀県鳥栖市を中心とした地域密着型の塗装店です。塗装業務の他に、各種取次業務も行っており、住まいのことなら安心して何でもご相談いただけます。鳥栖市以外にお住まいの方もお気軽にご相談ください。',
+    url: 'https://nakazono-paint.netlify.app/about/',
+  };
+
+  const page = {
+    directory: 'about',
+    label: "当店について"
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('../include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('../include/_header') %>
+    <main>
+      <%- include('../include/_page-title', {value: page}) %>
+      <div class="c-wrapper u-mx-auto">
+        <%- include('../include/_breadcrumb', {value: page}) %>
+        <div class="p-about u-grid">
+          <section class="p-about-characteristics">
+            <h2 class="c-heading-secondary u-flex u-items-center u-column" id="about-characteristics" data-en="Characteristics">当店の特徴</h2>
+            <ul class="p-about-characteristics__list u-grid:lg">
+              <%
+                const characteristics = [
+                  {
+                    point: '丁寧な3度塗りを<br>全ての現場で行っています',
+                    text: '下塗り、中塗り、上塗りの3度塗り(防水は4度塗り)を全ての現場で実施しています。手間はかかりますが、中塗りを一切省かない丁寧な塗装を行っています。自分たちがお客様の立場になって満足できる工事を、持てる技術の全てをつぎ込み行っています。',
+                  },
+                  {
+                    point: '塗装以外でも住まいのことなら<br>何でも解決します',
+                    text: '塗装業だけにとどまらず、当店の独自のネットワークで腕利きの職人とお客様を繋ぎ、お住まいのことなら何でも解決いたします。',
+                  },
+                  {
+                    point: '完全自社施工なので<br>無駄なコストがかかりません',
+                    text: '塗装依頼を受けてから施工完了までを、一切下請けに出さず全て自社で行っている為、中間マージンが発生せず無駄なコストを抑えることが可能です。お客様にご満足いただくために、なるべく低価格で且つ質の高い工事をご提供させていただきます。',
+                  },
+                  {
+                    point: '神埼市・吉野ヶ里町を<br>中心とした地域密着型の塗装店',
+                    text: '私たちは地域の繋がりを大切にしたく地域密着にこだわっています。地域の皆様の住まいの困りごとを何でも相談していただき、それを必ず解決することをお約束します。もちろん神埼市以外にお住まいの方も是非、私たちにご相談ください。',
+                  },
+                ];
+
+                characteristics.forEach((value, index) => {
+              %>
+              <li class="p-about-characteristics__item u-flex u-items-center u-column">
+                <h3 class="p-about-characteristics__title u-text-center"><%- value.point %></h3>
+                <img class="u-block u-mx-auto" src="<%= path %>assets/img/about/icon<%= index + 1 %>.svg" alt="" width="64" height="64" decoding="async">
+                <p class="p-about-characteristics__text"><%= value.text %></p>
+              </li>
+              <% }); %>
+            </ul>
+          </section>
+          <section class="p-about-service">
+            <h2 class="c-heading-secondary u-flex u-items-center u-column" id="about-service" data-en="Service">取扱業務</h2>
+            <ul class="p-about-service__list u-grid u-block:lg">
+              <%
+                const service = [
+                  {
+                    title: '塗装工事',
+                    text: '外壁塗装には外観をキレイにするほか、雨風や紫外線から家を守る重要な役割があります。塗料は耐用年数が10年程度になっており、耐用年数を超えるとヒビが入って剥がれ落ち外観を損ねてしまいます。また外観を損ねるだけでなく、外壁そのものが雨風や紫外線で劣化してしまいます。一度劣化してしまうとそこから雨水が浸水し、建物自体が傷んでしまいます。建物の外観と耐久性を保つ為に、塗装をご検討ください。当店は外壁塗装だけでなく屋根や内壁の塗装も行っており、中塗りを省かない丁寧な3度塗りを、全ての現場において実施していますので、ご安心してご依頼ください。まずは現在の状況をしっかりと確認し、お客様のご要望をお伺いした上で、最適な塗り替えプランをご提案させていただきます。',
+                  },
+                  {
+                    title: '防水工事',
+                    text: '鉄ベランダやビルの屋上などは、平らな面が多いため水はけが悪く、浮きやひび割れ、膨れなどがでてきやすく、そのまま放っておくと雨漏りの原因となってしまいます。ひび割れから外壁の中に雨水が侵入してしまうと建物を腐食させてしまい、建物の耐久性が著しく低下してしまいます。そういった水の被害から建物を守るのが防水工事です。通常の塗料だと外壁などにひびが入ると塗膜ごと割れてしまいます。しかし防水塗料は伸縮性に優れているので外壁などにひびが入っても塗膜は割れないため、中に水が浸入するのを防いでくれます。近年は観測史上最大雨量更新などと、毎年のように大雨が降ります。その雨から大切な家を、建物を守りませんか?ぜひご検討ください。',
+                  },
+                  {
+                    title: 'シーリング工事',
+                    text: 'シーリング工事はコーキング工事ともいい、外壁とサッシとの間にできた隙間や、外壁ボードの繋ぎ目などを埋める工事です。隙間から雨水が浸入するのを防いだり、建物の気密性をあげたりする為に行う工事です。シーリング材で隙間を埋めますが建物で一番傷みやすいのがこのシーリング材になります。劣化するとヒビ割れたり触った時にぽろぽろと、くずが出てきたりします。こうなると建物の防水性と気密性が低下してしまい、雨水が浸入して建物が傷んでしまったり、外気の侵入により、建物内が快適な空間を維持できなかったりします。すると建物が傷んでしまいよけいな工事まですることになり費用がかさんでしまいます。シールをしっかりと保つことで建物の寿命を大きく伸ばします。',
+                  },
+                  {
+                    title: '光触媒コーティング',
+                    text: '光触媒とは、光をエネルギーとして物質に化学変化を起こさせる触媒を混ぜた塗料のことで、これを塗装後に上からコーティングすると、太陽の光を浴びることで自分の力で汚れを落とす力（自浄作用）を持つ外壁に生まれ変わります。メカニズムは太陽の光を浴びると化学変化が起き、雨が降ることにより外壁に付いた汚れが落ちます。外壁は常に外気にさらされており一番傷みやすく、その上メンテナンスがしづらいです。セルフクリーニングの力を借りることで、メンテナンスがしづらい外壁のメンテナンス頻度を下げることが可能です。またメンテナンス頻度を下げるだけでなく、空気浄化の効果もあるので家の周りの空気もキレイになる環境にも配慮した施工です。',
+                  },
+                ];
+
+                service.forEach((value, index) => {
+              %>
+              <% if (index % 2 === 0) { %>
+              <li class="p-about-service__item u-flex u-column u-row-reverse:lg u-mx-full:lg">
+              <% } else { %>
+              <li class="p-about-service__item u-flex u-column u-row:lg u-mx-full:lg">
+              <% }; %>
+                <div class="p-about-service__content u-contents u-flex:lg u-column:lg u-justify-center:xxl">
+                  <h3 class="p-about-service__title u-flex u-justify-center u-items-center u-text-center"><%= value.title %></h3>
+                  <p class="p-about-service__text u-text-justify u-mx-auto"><%= value.text %></p>
+                </div>
+                <picture class="p-about-service__img u-block u-mx-auto">
+                  <source srcset="<%= path %>assets/img/about/service<%= index + 1 %>.jpg" width="963" height="500">
+                  <img src="<%= path %>assets/img/about/service<%= index + 1 %>.jpg" alt="" width="963" height="500" decoding="async">
+                </picture>
+              </li>
+              <% }); %>
+              <li class="p-about-service__item">
+                <div class="p-about-service-agency u-grid">
+                  <h3 class="p-about-service__title u-flex u-justify-center u-items-center u-text-center">取次業務</h3>
+                  <ul class="p-about-service-agency__list u-grid">
+                    <%
+                      const serviceAgency = [
+                        { title: '建具工事'},
+                        { title: '左官工事'},
+                        { title: '板金工事'},
+                        { title: '看板工事'},
+                        { title: 'サッシ工事'},
+                        { title: '大工工事'},
+                        { title: '設備工事'},
+                        { title: '電気工事'},
+                        { title: '内装工事'},
+                        { title: '瓦工事'},
+                      ];
+
+                      serviceAgency.forEach((value, index) => {
+                    %>
+                    <li>
+                      <figure>
+                        <picture>
+                          <source srcset="<%= path %>assets/img/about/service<%= index + 5 %>.jpg" width="300" height="260">
+                          <img src="<%= path %>assets/img/about/service<%= index + 5 %>.jpg" alt="" width="300" height="260" decoding="async">
+                        </picture>
+                        <figcaption class="p-about-service__caption u-text-center"><%= value.title %></figcaption>
+                      </figure>
+                    </li>
+                    <% }); %>
+                  </ul>
+                  <p>
+                    中園塗装店では塗装業務の他に取次業務も行っております。上記に記載がないことでもお住まいのことで何かありましたら何でもご気軽にご相談ください。中園塗装店の独自ネットワークを活かし必ずお悩みを解決します。
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="p-about-info">
+            <h2 class="c-heading-secondary u-flex u-items-center u-column" id="about-info" data-en="Information">会社情報</h2>
+            <address>
+              <dl class="p-about-info__list u-mx-auto">
+                <%
+                  const information = [
+                    {
+                      term: '屋号',
+                      description: '中園塗装店',
+                    },
+                    {
+                      term: '住所',
+                      description: '&#12306;840-0000 <span class="u-inline-block">佐賀県鳥栖市曽根崎111-123</span>',
+                    },
+                    {
+                      term: '代表者名',
+                      description: '中園 一二三',
+                    },
+                    {
+                      term: 'Tel',
+                      description: '0000-00-0000',
+                    },
+                    {
+                      term: 'Fax',
+                      description: '0000-00-0000',
+                    },
+                    {
+                      term: '取扱業務',
+                      description: '<span class="u-inline-block">塗装工事</span><span class="u-inline-block">防水工事</span><span class="u-inline-block">シーリング工事</span><span class="u-inline-block">光触媒コーティング</span>',
+                    },
+                    {
+                      term: '取次業務',
+                      description: '<span class="u-inline-block">建具工事</span><span class="u-inline-block">左官工事</span><span class="u-inline-block">板金工事</span><span class="u-inline-block">看板工事</span><span class="u-inline-block">サッシ工事</span><span class="u-inline-block">大工工事</span><span class="u-inline-block">設備工事</span><span class="u-inline-block">電気工事</span><span class="u-inline-block">内装工事</span><span class="u-inline-block">瓦工事</span>',
+                    },
+                  ];
+
+                  information.forEach((value, index) => {
+                %>
+                <div class="p-about-info__item u-flex:md u-items-start:md">
+                  <dt class="p-about-info__term"><%= value.term %></dt>
+                  <dd class="p-about-info__description"><%- value.description %></dd>
+                </div>
+                <% }); %>
+              </dl>
+            </address>
+          </section>
+        </div>
+      </div>
+
+    </main>
+    <%- include('../include/_footer') %>
+  </div>
+</body>
+</html>

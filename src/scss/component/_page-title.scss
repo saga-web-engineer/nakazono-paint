@@ -1,0 +1,28 @@
+@use '../tool/' as t;
+
+.c-page-title__title {
+  --wave-h: clamp(45px, 12.5vw, 240px);
+
+  font-size: clamp(t.rem(28px), t.rem(14px) + 5.5vw, t.rem(80px));
+  left: 20%;
+
+  // text-shadow: 1px 1px 2px rgb(255 255 255 / 60%);
+  -webkit-text-stroke: 1px var(--base-color);
+  top: 50%;
+  transform: translateY(-60%);
+
+  @include t.responsive(xl) {
+    top: calc(50% - var(--wave-h));
+    transform: translateY(calc(-50% + (var(--wave-h) / 2)));
+  }
+}
+
+.c-page-title__img {
+  min-height: 180px;
+  object-fit: cover;
+}
+
+.c-page-title__wave {
+  bottom: 0;
+  left: 0;
+}

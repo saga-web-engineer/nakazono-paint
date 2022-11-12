@@ -89,6 +89,12 @@
 
 .u-row {
   flex-direction: row;
+
+  &\:sm { @include t.responsive(sm) { flex-direction: row; } }
+  &\:md { @include t.responsive(md) { flex-direction: row; } }
+  &\:lg { @include t.responsive(lg) { flex-direction: row; } }
+  &\:xl { @include t.responsive(xl) { flex-direction: row; } }
+  &\:xxl { @include t.responsive(xxl) { flex-direction: row; } }
 }
 
 .u-row-reverse {

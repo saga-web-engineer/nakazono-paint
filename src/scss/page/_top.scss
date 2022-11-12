@@ -1,11 +1,15 @@
 @use '../tool/' as t;
 
+.p-top {
+  gap: min(38.89vw, 360px);
+}
+
 // mv
 .p-top-mv {
   height: clamp(568px, 142vw, 1352px);
 
   @include t.responsive(lg) {
-    height: min(132.13vw, 1938px);
+    // height: min(132.13vw, 1938px);
     height: clamp(1353px, 200px + 112.86vw, 1938px);
     padding-bottom: min(30%, 460px);
   }
@@ -207,7 +211,6 @@
 
 // plan
 .p-top-plan__list {
-  display: grid;
   gap: 40px 0;
   padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
 
@@ -218,13 +221,11 @@
 
 .p-top-plan__item {
   border-top: solid 1px var(--gray-color-primary);
-  display: grid;
   gap: min(2.78vw, 30px);
   padding-top: min(8.33vw, 40px);
 
   @include t.responsive(lg) {
     padding-inline: 1em;
-    position: relative;
   }
 
   &:nth-of-type(odd) {
@@ -257,8 +258,3 @@
 .p-top-plan__price {
   font-size: clamp(t.rem(20px), 10px + 2.17vw, t.rem(36px));
 }
-
-// works
-// .p-top-works {
-
-// }

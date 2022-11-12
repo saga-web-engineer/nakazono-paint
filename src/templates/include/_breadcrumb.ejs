@@ -1,0 +1,17 @@
+<% const path = "/"; %>
+<nav class="c-breadcrumb" aria-labelledby="aria-breadcrumbs-label">
+  <ol class="c-breadcrumb__list u-flex" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <li class="c-breadcrumb__item u-flex u-items-center" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+      <a class="c-breadcrumb__link" href="<%= path %>" itemprop="item">
+        <span itemprop="name">ホーム</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <li class="c-breadcrumb__item u-flex u-items-center" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+      <a class="c-breadcrumb__link" href="<%= path %><%= value.directory %>" itemprop="item" aria-current="page" style="pointer-events:none;" tabindex="-1">
+        <span itemprop="name"><%= value.label %></span>
+      </a>
+      <meta itemprop="position" content="2" />
+    </li>
+  </ol>
+</nav>

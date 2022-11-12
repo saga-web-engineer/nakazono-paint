@@ -1,7 +1,6 @@
 @use '../tool/' as t;
 
 .c-cards {
-  display: grid;
   gap: clamp(10px, 2.93vw, 30px);
   grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 29.29vw, 410px), 1fr));
   padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
@@ -13,7 +12,6 @@
 
   border: solid 1px var(--gray-color-primary);
   border-radius: calc(var(--inner) + var(--space));
-  display: block;
   height: 100%;
   padding: var(--space) var(--space) calc(var(--space) * 2);
   transition: transform var(--duration-secondary) var(--easing-hover), box-shadow var(--duration-secondary) var(--easing-hover);
@@ -46,9 +44,6 @@
 }
 
 .c-card__tags {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
   gap: 0.5em;
 
   span {

@@ -6,7 +6,7 @@
 
 .footer__outer {
   background-color: var(--gray-color-tertiary);
-  padding: 40px 0 20px;
+  padding-block: 40px 20px;
 
   @include t.responsive(xl) {
     padding-bottom: clamp(90px, 15px + 6.51vw, 140px);
@@ -21,15 +21,11 @@
 
 .footer__inner {
   @include t.responsive(xl) {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
     padding-top: 20px;
   }
 }
 
 .footer__list {
-  display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   padding: 40px 30px;
@@ -37,8 +33,6 @@
 
   @include t.responsive(xl) {
     border-bottom: solid 1px var(--gray-color-secondary);
-    display: flex;
-    justify-content: space-between;
     padding: 6px 0 30px;
   }
 }
@@ -48,18 +42,15 @@
 }
 
 .footer__link {
-  transition: opacity var(--duration-secondary) var(--easing-hover);
+  transition: color var(--duration-secondary) var(--easing-hover);
 
   @include t.hover {
-    opacity: 0.7;
+    color: var(--main-color);
   }
 }
 
 .footer__sns {
-  align-items: center;
-  display: flex;
   gap: clamp(16px, 8px + 2.67vw, 40px);
-  justify-content: center;
   padding-bottom: 20px;
 
   @include t.responsive(xl) {

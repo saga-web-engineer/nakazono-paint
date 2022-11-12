@@ -25,6 +25,9 @@
 // 見出しやタイトル
 @use 'heading';
 
+// 下層ページタイトル
+@use 'page-title';
+
 // ラッパー
 @use 'wrapper';
 
@@ -36,3 +39,9 @@
 
 // CTAエリア
 @use 'cta';
+
+// アイコン
+@use 'icon';
+
+// パンくず
+@use 'breadcrumb';

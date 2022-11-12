@@ -25,11 +25,15 @@
 
 .u-ml-full {
   margin-left: calc(50% - 50vw);
+
+  &\:lg {@include t.responsive(lg) { margin-left: calc(50% - 50vw); }}
 }
 
 // margin-right
 .u-mr-full {
   margin-right: calc(50% - 50vw);
+
+  &\:lg {@include t.responsive(lg) { margin-right: calc(50% - 50vw); }}
 }
 
 // margin-inline

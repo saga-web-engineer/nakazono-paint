@@ -1,9 +1,0 @@
-@use '../tool/' as t;
-
-.main {
-  // display: grid;
-  // gap: min(22.22vw, 260px);
-  display: flex;
-  flex-direction: column;
-  gap: min(38.89vw, 360px);
-}
