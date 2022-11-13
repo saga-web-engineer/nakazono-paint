@@ -1,9 +1,5 @@
 @use '../tool/' as t;
 
-.footer {
-  padding-top: clamp(90px, 30px + 9.29vw, 160px);
-}
-
 .footer__outer {
   background-color: var(--gray-color-tertiary);
   padding-block: 40px 20px;

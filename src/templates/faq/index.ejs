@@ -1,0 +1,95 @@
+<%
+  const meta = {
+    title: 'よくある質問 | 中園塗装店',
+    description: '佐賀県鳥栖市・中園塗装店のお客様によくいただいく質問です。ぜひお役立てください。',
+    url: 'https://nakazono-paint.netlify.app/faq/',
+  };
+
+  const page = {
+    directory: 'faq',
+    label: "よくある質問"
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('../include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('../include/_header') %>
+    <main>
+      <%- include('../include/_page-title', {value: page}) %>
+      <div class="c-wrapper u-mx-auto">
+        <%- include('../include/_breadcrumb', {value: page}) %>
+        <div class="p-faq u-grid">
+          <p class="u-text-center:lg u-relative">
+            お客様からよく寄せられるご質問です。この他にもご質問、ご不明点がある際は<a class="c-underline" href="<%= path %>contact/">こちらから</a>お気軽にお問い合せください。
+          </p>
+          <div class="p-faq__container u-grid u-mx-auto" itemscope itemtype="https://schema.org/FAQPage">
+            <%
+              const faq = [
+                {
+                  question: '作業期間はどのくらいですか？',
+                  answer: '35坪くらいのお家で、職人2～3人で10～14日ほどかかります。また、外壁塗装は雨だと行えませんので、天候により若干変動します。',
+                },
+                {
+                  question: '塗り替え時期の目安はどのくらいですか？',
+                  answer: '住宅のある場所の環境によりますが、大体5年～10年に一度くらいです。塗料が劣化してしまいますと家が傷んでしまい、余計な費用までかさんでしまいますので、5年～を目安にご検討されてはいかがでしょうか。また当店はお見積りは無料となっておりますので<a href="/contact">こちらから</a>お気軽にお問合せください。',
+                },
+                {
+                  question: '工事中の臭いは気になりませんか？',
+                  answer: '当店で使用している塗料は9割が水性塗料で臭いが少ないですが、どうしても若干の臭いはしてしまいます。しかし、ご迷惑をおかけすることは少ないと思います。',
+                },
+                {
+                  question: '工事中は家にいないといけませんか？',
+                  answer: 'お出かけされて問題ありません。戸締りのみ十分にご注意ください。また基本的にお手洗いをお借りしたりなどすることはございません。',
+                },
+                {
+                  question: '工事中は洗濯物を干すことができますか？',
+                  answer: '工程上どうしても干せない日はありますが、ベランダ周辺だけを先に仕上げる等の対策をとり、洗濯物を干すスペ－スをなるべく確保するようにしています。',
+                },
+                {
+                  question: '植木鉢などの物は置いたままで大丈夫ですか？',
+                  answer: '植木鉢など移動できる物はなるべく遠くに移動してください。重たい物はお手伝いさせて頂きます。地植えしてある物のように移動できない物については、そのまま養生して汚れが付かないように工事を進めます。',
+                },
+                {
+                  question: 'ご近所にご迷惑がかかったり苦情が来るなどしませんか？',
+                  answer: 'ご近所トラブル防止のため工事開始前のご近所様へのご挨拶、飛散防止等の対策をとっております。',
+                },
+                {
+                  question: '塗装工事は外壁のみしか行ってもらえないのですか？',
+                  answer: 'いいえ、外壁以外にも屋根や住居の中の壁・柱などの塗装も行っております。基本的に塗装なら何でも対応致します。以前にテーブル類の家具の塗装も受けたことがございます。',
+                },
+                {
+                  question: '鳥栖市以外に住んでいても依頼できますか？',
+                  answer: '鳥栖市を中心に業務を行っていますが、鳥栖市以外でも対応致しますので鳥栖市以外にお住まいの方も是非お気軽にご相談ください。',
+                },
+                {
+                  question: '塗装のこと以外でも住まいの相談を受けてもらえるのですか？',
+                  answer: 'お住まいのことは塗装以外でも何でもご相談ください。住まいのお悩みを全て解決できるようにご提案させていただきます。過去にはシロアリ駆除のご依頼も受けたことがございます。',
+                },
+              ];
+
+              faq.forEach(value => {
+            %>
+            <details class="c-accordion js-overlay-target js-details" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <summary class="c-accordion__title u-relative js-summary" itemprop="name">
+                <%= value.question %><span class="c-accordion__icon u-absolute">+</span>
+              </summary>
+              <div class="c-accordion__content js-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="c-accordion__text u-relative" itemprop="text"><%- value.answer %></p>
+              </div>
+            </details>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <%- include('../include/_footer') %>
+  </div>
+</body>
+</html>

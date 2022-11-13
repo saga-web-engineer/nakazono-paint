@@ -2,6 +2,7 @@
 
 .p-top {
   gap: min(38.89vw, 360px);
+  padding-bottom: clamp(90px, 30px + 9.29vw, 160px);
 }
 
 // mv
@@ -257,4 +258,18 @@
 
 .p-top-plan__price {
   font-size: clamp(t.rem(20px), 10px + 2.17vw, t.rem(36px));
+}
+
+// works
+.p-top-works__list {
+  gap: clamp(10px, 2.93vw, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 29.29vw, 410px), 1fr));
+  padding-block: min(11.11vw, 80px) min(16.67vw, 80px);
+}
+
+// faq
+.p-top-faq__container {
+  gap: min(8vw, 60px);
+  padding-block: min(11.11vw, 80px) min(16.67vw, 80px);
+  width: min(100%, 1000px);
 }

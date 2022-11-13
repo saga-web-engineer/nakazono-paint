@@ -1,0 +1,36 @@
+<%
+  const meta = {
+    title: '中園塗装 | ',
+    description: '',
+    url: '',
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('include/_head', {head: meta}) %>
+
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('include/_header') %>
+    <main class="main u-flex u-column">
+        <svg width="0" height="0" style="position: absolute; top: 0; left: 0;">
+          <clipPath id="test1">
+            <path d="M1242.868-91.735c159.823,34.074,293.375,128.887,276.954,233.33-17.515,104.443-186.096,217.034-216.747,342.217-29.556,125.183,77.722,261.478,39.409,337.773-38.314,77.036-224.41,92.591-375.476,69.629-152.161-22.963-270.386-85.925-437.873-92.591-166.392-7.407-383.138,41.481-535.299,6.667-151.066-35.555-238.64-155.553-271.481-282.959-33.935-128.146-14.231-263.7,70.06-375.55C-123.295,34.93,25.582-53.217,189.784-85.809c164.202-31.851,344.825-8.148,527.636-9.629,181.717-2.222,365.624-29.629,525.447,3.704Z"/>
+          </clipPath>
+        </svg>
+
+        <!-- <svg width="1920" height="1080" viewBox="0 0 1920 1080">
+          <image xlink:href="" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#test1)" />
+        </svg> -->
+        <div style="width:100vw; clip-path: url(#test1);">
+          <img style="width:1530px; height:892px" src="<%= path %>assets/img/top/mv.jpg">
+        </div>
+    </main>
+    <%- include('include/_footer') %>
+  </div>
+</body>
+</html>

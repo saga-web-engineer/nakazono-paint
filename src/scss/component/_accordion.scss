@@ -6,30 +6,24 @@
   --left: clamp(16px, 16px + 1vw, 2em);
   --offset1: 20px;
   --offset2: -20px;
-  --blur: 60px;
-  --color1: var(--blue-color-secondary);
-  --color2: var(--blue-color-tertiary);
+  --blur: min(2.6vw, 60px);
 
-  box-shadow: var(--offset1) var(--offset1) var(--blur) var(--color1), var(--offset2) var(--offset2) var(--blur) var(--color2);
-
-  &.js-overlay {
-    --color1: var(--gold-color-tertiary);
-    --color2: var(--gold-color-quaternary);
-  }
+  background-color: var(--base-color);
+  box-shadow: var(--offset1) var(--offset1) var(--blur) var(--gray-color-quaternary), var(--offset2) var(--offset2) var(--blur) var(--base-color);
 }
 
 .c-accordion__title {
   padding: var(--py) var(--px);
-  transition: background-color 0.3s var(--easing-hover);
+  border: solid 1px transparent;
+  transition: opacity var(--duration-secondary) var(--easing-hover);
 
   @include t.hover {
-    background-color: var(--blue-color-primary);
+    opacity: .7;
   }
 
   &::before {
-    color: var(--white-color-primary);
+    color: var(--main-color);
     content: 'Q.';
-    font-family: var(--font-gothic);
     left: var(--left);
     position: absolute;
   }
@@ -41,6 +35,7 @@
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s var(--easing-hover);
+  color: var(--main-color);
 
   @at-root {
     .c-accordion.is-open & {
@@ -51,15 +46,28 @@
 
 .c-accordion__content {
   overflow: hidden;
+  // border: solid 1px transparent;
+  // transition: border var(--duration-secondary) var(--easing-hover);
+
+  // @at-root {
+  //   .c-accordion__title {
+  //     @include t.hover {
+  //       & + .c-accordion__content {
+  //         border-right: solid 1px var(--main-color);
+  //         border-left: solid 1px var(--main-color);
+  //         border-bottom: solid 1px var(--main-color);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .c-accordion__text {
   padding: var(--py) var(--px);
 
   &::before {
-    color: var(--white-color-primary);
+    color: var(--main-color);
     content: 'A.';
-    font-family: var(--font-gothic);
     left: var(--left);
     position: absolute;
   }

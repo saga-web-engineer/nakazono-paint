@@ -4,7 +4,7 @@
   --space: clamp(40px, 11.72vw, 120px);
 
   gap: var(--space);
-  padding-top: var(--space);
+  padding-block: var(--space);
 }
 
 // Characteristics
@@ -131,6 +131,7 @@
 
 .p-about-info__term {
   min-width: clamp(84px, 42px + 13.28vw, 144px);
+  text-transform: uppercase;
 }
 
 .p-about-info__description {

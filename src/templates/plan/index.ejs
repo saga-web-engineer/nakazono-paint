@@ -1,0 +1,36 @@
+<%
+  const meta = {
+    title: '施工プラン | 中園塗装店',
+    description: '',
+    url: 'https://nakazono-paint.netlify.app/plan/',
+  };
+
+  const page = {
+    directory: 'plan',
+    label: "施工プラン"
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('../include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('../include/_header') %>
+    <main>
+      <%- include('../include/_page-title', {value: page}) %>
+      <div class="c-wrapper u-mx-auto">
+        <%- include('../include/_breadcrumb', {value: page}) %>
+        <div class="p-plan u-grid">
+
+        </div>
+      </div>
+
+    </main>
+    <%- include('../include/_footer') %>
+  </div>
+</body>
+</html>

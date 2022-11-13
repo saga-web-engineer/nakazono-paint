@@ -1,6 +1,13 @@
 @use '../tool/' as t;
 
 .p-faq {
-  display: grid;
+  --space: clamp(40px, 11.72vw, 120px);
+
+  gap: calc(var(--space) / 2);
+  padding-block: var(--space);
+}
+
+.p-faq__container {
   gap: min(8vw, 60px);
+  width: min(100%, 1000px);
 }

@@ -1,11 +1,5 @@
 @use '../tool/' as t;
 
-.c-cards {
-  gap: clamp(10px, 2.93vw, 30px);
-  grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 29.29vw, 410px), 1fr));
-  padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
-}
-
 .c-card__inner {
   --inner: 12px;
   --space: 8px;
@@ -24,13 +18,15 @@
 }
 
 .c-card__thumb {
-  border-radius: var(--inner);
-  max-height: 390px;
-  object-fit: cover;
-  width: 100vw;
+  img {
+    max-height: 390px;
+    object-fit: cover;
+    width: 100vw;
+    border-radius: var(--inner);
 
-  @include t.responsive(sm) {
-    max-height: 290px;
+    @include t.responsive(sm) {
+      max-height: 290px;
+    }
   }
 }
 

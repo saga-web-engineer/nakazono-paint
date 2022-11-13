@@ -1,0 +1,36 @@
+<%
+  const meta = {
+    title: 'お問い合せ | 中園塗装店',
+    description: '佐賀県鳥栖市・中園塗装店。見積り依頼やご不明点等ございましたらこちらからお問い合せください。お電話からも対応しております。(0000-00-0000 ｜平日9時~18時)',
+    url: 'https://nakazono-paint.netlify.app/contact/',
+  };
+
+  const page = {
+    directory: 'contact',
+    label: "お問い合せ"
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('../include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('../include/_header') %>
+    <main>
+      <%- include('../include/_page-title', {value: page}) %>
+      <div class="c-wrapper u-mx-auto">
+        <%- include('../include/_breadcrumb', {value: page}) %>
+        <div class="p-plan u-grid">
+
+        </div>
+      </div>
+
+    </main>
+    <%- include('../include/_footer') %>
+  </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <%
   const meta = {
-    title: '中園塗装 | 佐賀県で一番頼れる塗装屋',
+    title: '中園塗装店 | 佐賀県で一番頼れる塗装屋',
     description: '中園塗装店は佐賀県鳥栖市を中心とした地域密着型の塗装店です。塗装業務の他に、各種取次業務も行っており、住まいのことなら安心して何でもご相談いただけます。鳥栖市以外にお住まいの方もお気軽にご相談ください。',
     url: 'https://nakazono-paint.netlify.app',
   };
@@ -148,19 +148,19 @@
       <section class="p-top-works">
         <div class="c-wrapper u-mx-auto">
           <h2 class="c-heading u-flex u-justify-center u-items-center u-relative" id="top-works" data-english="Works">施工事例</h2>
-          <ul class="c-cards u-grid">
+          <ul class="p-top-works__list u-grid">
             <%
               const worksList = [
                 {
-                  title: "佐賀県鳥栖市　U邸",
+                  title: "佐賀県鳥栖市　<span class=u-inline-block>U邸</span>",
                   tags: '<span>外壁塗装</span><span>屋根塗装</span>',
                 },
                 {
-                  title: "佐賀県佐賀市　H邸",
+                  title: "佐賀県佐賀市　<span class=u-inline-block>H邸</span>",
                   tags: '<span>外壁塗装</span><span>屋根塗装</span><span>光触媒コーティング</span>',
                 },
                 {
-                  title: "福岡県柳川市　Iアパート",
+                  title: "福岡県柳川市　<span class=u-inline-block>Iアパート</span>",
                   tags: '<span>外壁塗装</span><span>屋根塗装</span><span>防水工事</span>',
                 },
               ];
@@ -168,10 +168,13 @@
               worksList.forEach((value, index) => {
             %>
             <li class="c-card">
-              <a class="c-card__inner u-block" href="#">
-                <img class="c-card__thumb" src="<%= path %>assets/img/works/works<%= index + 1 %>.jpg" alt="" width="370" height="280" decoding="async">
+              <a class="c-card__inner u-block" href="#!">
+                <picture class="c-card__thumb">
+                  <source srcset="<%= path %>assets/img/works/works<%= index + 1 %>.webp" width="370" height="280">
+                  <img src="<%= path %>assets/img/works/works<%= index + 1 %>.jpg" alt="" width="370" height="280" decoding="async">
+                </picture>
                 <div class="c-card__content">
-                  <h3 class="c-card__title"><%= value.title %></h3>
+                  <h3 class="c-card__title"><%- value.title %></h3>
                   <div class="c-card__tags u-flex u-items-center u-flex-wrap"><%- value.tags %></div>
                 </div>
               </a>
@@ -180,10 +183,49 @@
           </ul>
           <a class="c-button-wave u-flex u-justify-center u-items-center u-relative u-mx-auto" href="<%= path %>works/">
             <div class="c-button-wave__effect u-absolute"></div>
-            <span class="u-relative">詳しく見てみる</span>
+            <span class="u-relative">他の実績も見てみる</span>
           </a>
         </div>
       </section><!-- //works -->
+      <!-- faq -->
+      <section class="p-top-faq">
+        <div class="c-wrapper u-mx-auto">
+          <h2 class="c-heading u-flex u-justify-center u-items-center u-relative" id="top-faq" data-english="FAQ">よくある質問</h2>
+          <div class="p-top-faq__container u-grid u-mx-auto" itemscope itemtype="https://schema.org/FAQPage">
+            <%
+              const faq = [
+                {
+                  question: '作業期間はどのくらいですか？',
+                  answer: '35坪くらいのお家で、職人2～3人で10～14日ほどかかります。また、外壁塗装は雨だと行えませんので、天候により若干変動します。',
+                },
+                {
+                  question: '塗り替え時期の目安はどのくらいですか？',
+                  answer: '住宅のある場所の環境によりますが、大体5年～10年に一度くらいです。塗料が劣化してしまいますと家が傷んでしまい、余計な費用までかさんでしまいますので、5年～を目安にご検討されてはいかがでしょうか。また当店はお見積りは無料となっておりますので<a href="/contact">こちらから</a>お気軽にお問合せください。',
+                },
+                {
+                  question: '工事中の臭いは気になりませんか？',
+                  answer: '当店で使用している塗料は9割が水性塗料で臭いが少ないですが、どうしても若干の臭いはしてしまいます。しかし、ご迷惑をおかけすることは少ないと思います。',
+                },
+              ];
+
+              faq.forEach(value => {
+            %>
+            <details class="c-accordion js-overlay-target js-details" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <summary class="c-accordion__title u-relative js-summary" itemprop="name">
+                <%= value.question %><span class="c-accordion__icon u-absolute">+</span>
+              </summary>
+              <div class="c-accordion__content js-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="c-accordion__text u-relative" itemprop="text"><%- value.answer %></p>
+              </div>
+            </details>
+            <% }); %>
+          </div>
+          <a class="c-button-wave u-flex u-justify-center u-items-center u-relative u-mx-auto" href="<%= path %>works/">
+            <div class="c-button-wave__effect u-absolute"></div>
+            <span class="u-relative">他の質問も見てみる</span>
+          </a>
+        </div>
+      </section><!-- //faq -->
     </main>
     <%- include('include/_footer') %>
   </div>
