@@ -9,16 +9,16 @@
   --blur: min(2.6vw, 60px);
 
   background-color: var(--base-color);
-  box-shadow: var(--offset1) var(--offset1) var(--blur) var(--gray-color-quaternary), var(--offset2) var(--offset2) var(--blur) var(--base-color);
+  box-shadow: var(--offset1) var(--offset1) var(--blur) var(--gray-color-quaternary),var(--offset2) var(--offset2) var(--blur) var(--base-color);
 }
 
 .c-accordion__title {
-  padding: var(--py) var(--px);
   border: solid 1px transparent;
+  padding: var(--py) var(--px);
   transition: opacity var(--duration-secondary) var(--easing-hover);
 
   @include t.hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &::before {
@@ -30,12 +30,12 @@
 }
 
 .c-accordion__icon {
+  color: var(--main-color);
   font-size: clamp(#{t.rem(22px)}, 5.56vw, #{t.rem(30px)});
   right: 0.75em;
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s var(--easing-hover);
-  color: var(--main-color);
 
   @at-root {
     .c-accordion.is-open & {
@@ -46,6 +46,7 @@
 
 .c-accordion__content {
   overflow: hidden;
+
   // border: solid 1px transparent;
   // transition: border var(--duration-secondary) var(--easing-hover);
 

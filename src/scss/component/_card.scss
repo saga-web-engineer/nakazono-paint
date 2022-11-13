@@ -19,10 +19,10 @@
 
 .c-card__thumb {
   img {
+    border-radius: var(--inner);
     max-height: 390px;
     object-fit: cover;
     width: 100vw;
-    border-radius: var(--inner);
 
     @include t.responsive(sm) {
       max-height: 290px;

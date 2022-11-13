@@ -8,4 +8,3 @@ import './parallax';
 import './rollingText';
 import './SubmitButtonValidate';
 import './SwitchViewport';
-
