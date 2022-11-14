@@ -6,9 +6,7 @@ const validate = (): void => {
   const validForm = document.querySelector<HTMLFormElement>('form:valid');
   const submitButton = document.querySelector<HTMLButtonElement>('#submit');
 
-  if (submitButton !== null) {
-    submitButton.disabled = validForm === null;
-  }
+  if (submitButton !== null) submitButton.disabled = validForm === null;
 };
 
 validate();

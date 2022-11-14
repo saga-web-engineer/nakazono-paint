@@ -1,63 +1,63 @@
 @use '../tool/' as t;
 
-.p-form {
-  background-color: var(--white-color-secondary);
-  color: var(--black-color-primary);
-  padding: 3em clamp(1em, 3.94vw, 60px);
+.c-form {
+  --space: clamp(40px, 11.72vw, 120px);
+
+  gap: calc(var(--space) / 2);
+  padding-block: var(--space);
+  width: min(100%, 800px);
 }
 
-.p-form__required {
+.c-form__text {
+  .c-icon {
+    vertical-align: -4px;
+  }
+}
+
+.c-form__inner {
+  gap: 3em;
+}
+
+.c-form__required {
   background-color: var(--pink-color-secondary);
   border-radius: 3px;
-  color: var(--white-color-primary);
+  color: var(--base-color);
   font-size: 0.75em;
   padding: 0.35em 0.6em;
   vertical-align: 2px;
 }
 
-.p-form__label {
+.c-form__label {
   font-size: t.rem(16px);
 }
 
-.p-form__input {
+.c-form__input {
   appearance: none;
-  border: solid 1px var(--white-color-tertiary);
-  font-size: t.rem(16px);
+  border: solid 1px var(--gray-color-tertiary);
+  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
   height: 3.125em;
   line-height: 3.125;
   overflow: hidden;
   padding: 0 1em;
   text-overflow: ellipsis;
-  transition: background-color 0.3s var(--easing-hover);
+  transition: background-color var(--duration-secondary) var(--easing-hover);
   width: 100%;
-
-  @include t.responsive(md) {
-    font-size: t.rem(18px);
-  }
-
-  &::placeholder {
-    font-family: var(--font-mincho);
-  }
 }
 
-.p-form__textarea {
+.c-form__textarea {
   appearance: none;
-  border: solid 1px var(--white-color-tertiary);
-  font-size: t.rem(16px);
+  border: solid 1px var(--gray-color-tertiary);
+  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
   height: min(33.33vw, 200px);
   padding: 1em;
   width: 100%;
-
-  @include t.responsive(md) {
-    font-size: t.rem(18px);
-  }
 
   &:valid {
     border: solid 1px var(--green-color-primary);
   }
 }
 
-.p-form__disabled {
+.c-form__disabled {
   color: var(--red-color-primary);
 
   @at-root {
@@ -67,7 +67,7 @@
   }
 }
 
-.p-form__valid {
+.c-form__valid {
   color: var(--green-color-primary);
   right: 1em;
   top: 50%;
@@ -80,7 +80,7 @@
   }
 }
 
-.p-form__invalid {
+.c-form__invalid {
   color: var(--red-color-primary);
   right: 1em;
   top: 50%;
@@ -106,6 +106,10 @@
   }
 }
 
+.c-form__bottom {
+  gap: 3em;
+}
+
 input.--required {
   &:valid {
     border: solid 1px var(--green-color-primary);
@@ -116,6 +120,6 @@ input.--required {
   }
 
   &:placeholder-shown {
-    border: solid 1px var(--white-color-tertiary);
+    border: solid 1px var(--gray-color-tertiary);
   }
 }

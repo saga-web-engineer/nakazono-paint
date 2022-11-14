@@ -1,13 +1,7 @@
 @use '../tool/' as t;
 
 .p-thanks {
-  background-color: var(--white-color-primary);
-  color: var(--black-color-primary);
-  height: fit-content;
-  inset: 0;
-  padding: 4em 1.5em;
-
-  @include t.responsive(md) {
-    padding: 4em;
-  }
+  gap: 1em;
+  padding-block: 8em;
+  width: min(100%, 600px);
 }

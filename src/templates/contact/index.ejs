@@ -24,11 +24,106 @@
       <%- include('../include/_page-title', {value: page}) %>
       <div class="c-wrapper u-mx-auto">
         <%- include('../include/_breadcrumb', {value: page}) %>
-        <div class="p-plan u-grid">
-
-        </div>
+        <form class="c-form u-grid u-mx-auto" id="form" method="post" action="<%= path %>thanks/" name="form" data-netlify="true" data-netlify-recaptcha="true">
+          <p class="c-form__text">
+            必要事項をご入力ください。<br>
+            <span class="c-form__required">必須</span>の項目はお手数ですが必ずご入力をお願いいたします。<br>
+            お電話でのお問い合せは<span class="c-icon">smartphone</span>0000-00-0000</a><span class="u-inline-block">(平日9:00~17:00)</span>
+          </p>
+          <div class="c-form__inner u-grid">
+            <div>
+              <label class="c-form__label" for="name">お名前<strong class="c-form__required u-ml1em">必須</strong></label>
+              <p class="u-relative">
+                <input
+                  class="c-form__input --required"
+                  id="name"
+                  type="text"
+                  name="お名前"
+                  autocomplete="name"
+                  placeholder="(例) 中園　一二三"
+                  title="お名前のご入力は必須です"
+                  required
+                  aria-required="true"
+                />
+                <span class="c-form__valid c-icon u-absolute" hidden>done</span>
+              </p>
+            </div>
+            <div>
+              <label class="c-form__label" for="name-furigana">お名前(フリガナ)<strong class="c-form__required u-ml1em">必須</strong></label>
+              <p class="u-relative">
+                <input
+                  class="c-form__input --required"
+                  id="name-frigana"
+                  type="text"
+                  name="お名前(フリガナ)"
+                  placeholder="(例) ナカゾノ　ヒフミ"
+                  autocomplete="name"
+                  pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*"
+                  title="フリガナは全角カタカナで入力してください"
+                  required
+                  aria-required="true"
+                />
+                <span class="c-form__valid c-icon u-absolute" hidden>done</span>
+                <span class="c-form__invalid c-icon u-absolute" hidden>error_outline</span>
+                <span class="c-form__invalid --text u-absolute" hidden>フリガナは全角カタカナで入力してください</span>
+              </p>
+            </div>
+            <div>
+              <label class="c-form__label" for="tel">電話番号 &#8251;ハイフン(-)ありなしどちらでも可</label>
+              <p class="u-relative">
+                <input
+                  class="c-form__input --required"
+                  id="tel"
+                  type="tel"
+                  name="電話番号"
+                  placeholder="(例) 090-0000-0000"
+                  pattern="\d{2,4}-?\d{2,4}-?\d{3,4}"
+                  title="電話番号は正しく入力してください"
+                />
+                <span class="c-form__invalid c-icon u-absolute" hidden>error_outline</span>
+                <span class="c-form__invalid --text u-absolute" hidden>電話番号は正しく入力してください</span>
+              </p>
+            </div>
+            <div>
+              <label class="c-form__label" for="email">メールアドレス<strong class="c-form__required u-ml1em">必須</strong></label>
+              <p class="u-relative">
+                <input
+                  class="c-form__input --required"
+                  id="email"
+                  type="email"
+                  name="メールアドレス"
+                  placeholder="(例) example@example.com"
+                  autocomplete="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                  title="メールアドレスは正しく入力してください"
+                  required
+                  aria-required="true"
+                />
+                <span class="c-form__valid c-icon u-absolute" hidden>done</span>
+                <span class="c-form__invalid c-icon u-absolute" hidden>error_outline</span>
+                <span class="c-form__invalid --text u-absolute" hidden>メールアドレスは正しく入力してください</span>
+              </p>
+            </div>
+            <div>
+              <label class="c-form__label" for="message">お問い合せ内容<strong class="c-form__required u-ml1em">必須</strong></label>
+              <p class="u-relative js-textarea">
+                <textarea class="c-form__textarea --required" id="message" name="お問い合せ内容" title="お問い合わせ内容は必ず入力してください" required aria-required="true"></textarea>
+                <span class="c-form__valid c-icon u-absolute" hidden>done</span>
+              </p>
+            </div>
+            <div class="c-form__bottom u-gird">
+              <!-- Netlify reCAPTCHA -->
+              <div class="c-form__group u-flex u-justify-center u-mt6">
+                <div data-netlify-recaptcha="true"></div>
+              </div><!-- //Netlify reCAPTCHA -->
+              <div>
+                <button class="c-button-submit u-flex u-justify-center u-items-center u-mx-auto" id="submit" type="submit">送信する</button>
+                <p class="c-form__disabled u-text-center" role="alert" hidden>必須項目がすべて入力されていません</p>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-
     </main>
     <%- include('../include/_footer') %>
   </div>

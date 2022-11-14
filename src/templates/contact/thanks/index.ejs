@@ -1,0 +1,36 @@
+<%
+  const meta = {
+    title: 'お問い合せ | 中園塗装店',
+    description: 'お問い合せありがとうございました',
+    url: 'https://nakazono-paint.netlify.app/contact/thanks/',
+  };
+
+  const page = {
+    directory: 'contact',
+    label: "お問い合せ"
+  };
+%>
+<% const path = "/"; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include('../../include/_head', {head: meta}) %>
+</head>
+
+<body>
+  <div class="layout">
+    <%- include('../../include/_header') %>
+    <main>
+      <%- include('../../include/_page-title', {value: page}) %>
+      <div class="c-wrapper u-mx-auto">
+        <div class="p-thanks u-grid u-text-center u-mx-auto">
+          <h2>お問い合せいただき<br class="u-none:lg">ありがとうございました</h2>
+          <p>担当者が確認し2営業日以内に<br class="u-none:lg">ご返信いたします。</p>
+          <a class="c-button u-flex u-justify-center u-items-center u-mx-auto" href="<%= path %>contact">トップページに戻る</a>
+        </div>
+      </div>
+    </main>
+    <%- include('../../include/_footer') %>
+  </div>
+</body>
+</html>
