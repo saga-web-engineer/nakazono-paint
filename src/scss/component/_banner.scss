@@ -1,0 +1,17 @@
+@use '../tool/' as t;
+
+.c-banner {
+  opacity: 0;
+  pointer-events: none;
+  right: 0;
+  top: 20vh;
+  transition: opacity var(--duration-secondary), transform var(--duration-secondary) var(--easing-faded);
+  visibility: hidden;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-30px);
+    visibility: visible;
+  }
+}

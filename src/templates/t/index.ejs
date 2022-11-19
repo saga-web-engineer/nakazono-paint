@@ -9,13 +9,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<%- include('include/_head', {head: meta}) %>
+<%- include('../include/_head', {head: meta}) %>
 
 </head>
 
 <body>
   <div class="layout">
-    <%- include('include/_header') %>
+    <%- include('../include/_header') %>
     <main class="main u-flex u-column">
         <svg width="0" height="0" style="position: absolute; top: 0; left: 0;">
           <clipPath id="test1">
@@ -30,7 +30,7 @@
           <img style="width:1530px; height:892px" src="<%= path %>assets/img/top/mv.jpg">
         </div>
     </main>
-    <%- include('include/_footer') %>
+    <%- include('../include/_footer') %>
   </div>
 </body>
 </html>
