@@ -134,6 +134,16 @@
 
 .u-text-justify {
   text-align: justify;
+
+  &\:sm { @include t.responsive(sm) { text-align: justify; } }
+  &\:md { @include t.responsive(md) { text-align: justify; } }
+  &\:lg { @include t.responsive(lg) { text-align: justify; } }
+  &\:xl { @include t.responsive(xl) { text-align: justify; } }
+  &\:xxl { @include t.responsive(xxl) { text-align: justify; } }
+}
+
+.u-text-left {
+  text-align: left;
 }
 
 .u-text-uppercase {

@@ -18,7 +18,7 @@
 
 .p-top-mv__wrapper {
   height: calc(100vh - 80px);
-  height: calc(100dvh - 80px);
+  height: calc(100svh - 80px);
   padding-top: clamp(40px, 10px + 4.17vw, 60px);
 }
 
@@ -71,7 +71,7 @@
 }
 
 .p-top-mv__image {
-  height: calc(var(--height) + 200px);
+  height: calc(var(--height) + 100px);
   object-fit: cover;
   width: 100%;
 }
@@ -182,7 +182,7 @@
   }
 
   img {
-    height: calc(var(--size) + 200px);
+    height: calc(var(--size) + 100px);
     object-fit: cover;
   }
 }

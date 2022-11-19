@@ -9,7 +9,7 @@ parallax.forEach((target) => {
   gsap.fromTo(
     target.querySelector<HTMLImageElement>('img'),
     {
-      y: -200,
+      y: -100,
     },
     {
       y: 0,
@@ -24,4 +24,5 @@ parallax.forEach((target) => {
   );
 });
 
-export {};
+export { };
+
