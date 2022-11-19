@@ -1,0 +1,77 @@
+@use '../tool/' as t;
+
+.p-plan {
+  --space: clamp(40px, 11.72vw, 120px);
+
+  gap: var(--space);
+  padding-block: var(--space);
+}
+
+// price
+.p-plan-price__container {
+  gap: clamp(60px, 30px + 5vw, 100px);
+}
+
+.p-plan-price__title {
+  font-size: clamp(t.rem(20px), t.rem(10px) + 1.43vw, t.rem(30px));
+}
+
+.p-plan-price__content {
+  gap: clamp(14px, 5px + 2.5vw, 40px);
+}
+
+.p-plan-price__inner {
+  overflow-x: auto;
+}
+
+.p-plan-price__text {
+  width: fit-content;
+}
+
+// flow
+.p-plan-flow__list {
+  --number: clamp(50px, 25px + 3.75vw, 70px);
+  --width: min(100%, 726px);
+
+  width: var(--width);
+}
+
+.p-plan-flow__title {
+  font-size: clamp(t.rem(18px), 9px + 1.75vw, t.rem(30px));
+  gap: clamp(6px, 3px + 2.25vw, 30px);
+  line-height: 1;
+}
+
+.p-plan-flow__number {
+  aspect-ratio: 1;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: var(--base-color);
+  font-size: clamp(t.rem(20px), 10px + 1.83vw, t.rem(32px));
+  padding: 0 0 4px 3px;
+  width: var(--number);
+}
+
+.p-plan-flow__line {
+  border-bottom: 1px dotted var(--main-color);
+  height: 1px;
+  width: clamp(20px, 10px + 3.33vw, 50px);
+}
+
+.p-plan-flow__container {
+  --p-tl: clamp(12px, 3.33vw, 50px);
+  --p-b: clamp(12px, 3.33vw, 80px);
+
+  border-left: 1px dotted var(--main-color);
+  left: calc(var(--number) / 2);
+  padding: var(--p-tl) 0 var(--p-b) var(--p-tl);
+  width: calc(var(--width) - calc(var(--number) / 2));
+}
+
+.p-plan-flow__inner {
+  width: min(100%, 630px);
+}
+
+.p-plan-flow__text {
+  padding: clamp(20px, 10px + 3.91vw, 40px) 1em 0 1em;
+}

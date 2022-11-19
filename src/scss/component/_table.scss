@@ -1,0 +1,66 @@
+@use '../tool/' as t;
+
+.c-table {
+  border: solid 1px var(--gray-color-quaternary);
+  border-collapse: collapse;
+  width: max(100%, 1010px);
+
+  @include t.responsive(lg) {
+    width: 100%;
+  }
+}
+
+.c-table__row {
+  @at-root {
+    .c-table__body & {
+      border-top: solid 1px var(--gray-color-quaternary);
+    }
+  }
+}
+
+.c-table__column {
+  padding: 1em 0.75em;
+
+  &.--span2 {
+    width: calc(100% / 2);
+  }
+
+  &.--span3 {
+    width: calc(100% / 3);
+  }
+
+  &.--span4 {
+    width: calc(100% / 4);
+  }
+
+  &.--span5 {
+    width: calc(100% / 5);
+  }
+
+  &:not(:first-child) {
+    border-left: solid 1px var(--gray-color-quaternary);
+  }
+
+  &:empty::before {
+    background-color: var(--text-color);
+    content: '';
+    display: block;
+    height: 1px;
+    margin-inline: auto;
+    width: 10px;
+  }
+
+  @at-root {
+    .c-table__head & {
+      background-color: var(--lightblue-color-secondary);
+
+      &:nth-of-type(1) {
+        background-color: var(--lightblue-color-primary);
+      }
+    }
+
+    .c-table__body &:first-child {
+      background-color: var(--lightblue-color-secondary);
+    }
+  }
+}

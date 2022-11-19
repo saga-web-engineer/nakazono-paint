@@ -1,10 +1,10 @@
 // import "core-js";
 
 import './accordion';
-import './Animation';
-import './AriaHiddenToBr';
-import './MicroModal';
+// import './Animation';
+import './ariaHiddenToBr';
+import './modal';
 import './parallax';
 import './rollingText';
 import './submitButtonValidate';
-import './SwitchViewport';
+import './switchViewport';

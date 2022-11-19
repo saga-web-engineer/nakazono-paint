@@ -2,4 +2,4 @@ User-agent: *
 # Disallow: /
 Disallow:
 
-Sitemap: https://matsuda-eel.netlify.app/sitemap.xml
+Sitemap: https://nakazono-paint.netlify.app/sitemap.xml
