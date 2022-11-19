@@ -106,10 +106,6 @@
   }
 }
 
-.c-form__bottom {
-  gap: 3em;
-}
-
 input.--required {
   &:valid {
     border: solid 1px var(--green-color-primary);
