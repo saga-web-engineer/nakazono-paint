@@ -24,5 +24,4 @@ parallax.forEach((target) => {
   );
 });
 
-export { };
-
+export {};
