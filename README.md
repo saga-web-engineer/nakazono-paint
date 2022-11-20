@@ -1,8 +1,8 @@
-# 松田うなぎ Webサイト
+# 中園塗装店 Webサイト
 
 ## URL
 こちらは架空のサイトで実際には存在しません  
-https://matsuda-eel.netlify.app/
+https://nakazono-paint.netlify.app/
 
 ## Version
 Voltaで管理しています。
