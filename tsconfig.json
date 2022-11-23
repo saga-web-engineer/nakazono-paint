@@ -11,9 +11,9 @@
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
     /* Language and Environment */
-    "target": "ES2017",                               /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": ["DOM", "ESNext"],                         /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    // "jsx": "preserve",                                /* Specify what JSX code is generated. */
+    "target": "ES2017",                               /* コンパイル後のJavaScriptバージョン */
+    "lib": ["DOM", "ESNext"],                         /* コンパイルの際に含める組み込みライブラリを指定 */
+    // "jsx": "preserve",                                /* JSXをどのような構成のJavaScriptに出力するか */
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
     // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'. */
@@ -21,37 +21,37 @@
     // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using 'jsx: react-jsx*'. */
     // "reactNamespace": "",                             /* Specify the object invoked for 'createElement'. This only applies when targeting 'react' JSX emit. */
     // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
-    // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
+    // "useDefineForClassFields": true,                  /* クラスのプロパティの定義にプロパティ初期化子を使うことを強制 */
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "ESNext",                               /* Specify what module code is generated. */
+    "module": "ESNext",                               /* 出力するモジュールの形式を指定する */
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-    "moduleResolution": "node",                       /* npmでインストールしたモジュールをTypeScriptが認識できるようにする */
-    // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "moduleResolution": "node",                       /* モジュールの解決方法を指定 */
+    // "baseUrl": "./",                                  /* モジュールの非相対インポートの起点となるディレクトリを指定 */
+    // "paths": {},                                      /* 個別にパターン指定した一連のモジュールの解決を再マッピング */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
-    // "resolveJsonModule": true,                        /* Enable importing .json files. */
+    // "resolveJsonModule": true,                        /* JSONファイルをインポートしてできたオブジェクトに自動で型をつける */
     // "noResolve": true,                                /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */
 
     /* JavaScript Support */
-    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+    // "allowJs": true,                                  /* JavaScriptファイルのインポートを可能にする */
     // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
     // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
 
     /* Emit */
-    // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    // "declaration": true,                              /* コンパイル対象となった各ファイルに対応する.d.tsファイルを生成する */
     // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
-    "outDir": "./dist",                               /* Specify an output folder for all emitted files. */
+    "outDir": "./dist",                               /* コンパイル結果を出力するディレクトリを指定 */
     // "removeComments": true,                           /* Disable emitting comments. */
-    // "noEmit": true,                                   /* Disable emitting files from a compilation. */
+    // "noEmit": true,                                   /* 型チェックのみを行い、コンパイル結果のファイルを出力しない */
     // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
     // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types. */
     // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
@@ -69,22 +69,22 @@
     // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
     /* Interop Constraints */
-    // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
-    // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
+    // "isolatedModules": true,                          /* すべてのファイルを単一のモジュールとしてコンパイルする場合に安全でない記法をコンパイルエラーにする */
+    // "allowSyntheticDefaultImports": true,             /* 明示的にデフォルトエクスポートしていないモジュールでもデフォルトインポートできるようにする */
     "esModuleInterop": true,                          /* importの記述を統一 */
     // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
     "forceConsistentCasingInFileNames": true,         /* ファイル名の大文字と小文字の区別をする */
 
     /* Type Checking */
-    "strict": true,                                   /* Enable all strict type-checking options. */
-    "noImplicitAny": true,                            /* 暗黙的に型がanyになる場合エラー */
-    "strictNullChecks": true,                         /* nullとundefinedに明示的な型を与える */
-    "strictFunctionTypes": true,                      /* 関数パラメーターの型チェックをより厳しくする */
-    "strictBindCallApply": true,                      /* 'bind', 'call', 'apply'を使用して関数を呼び出した場合引数の型チェックを行う */
-    "strictPropertyInitialization": true,             /* class内でプロパティ宣言があるがconstructor内で値がセットされていない場合エラー */
-    "noImplicitThis": true,                           /* 暗黙的にthisの型がanyになる場合エラー */
-    "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
-    "alwaysStrict": true,                             /* 'use strict'を全てのファイルの先頭に付与する */
+    "strict": true,                                   /* alwaysStrict, noImplicitAny, noImplicitThis, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, useUnknownInCatchVariables をまとめて有効化 */
+    // "noImplicitAny": true,                            /* 暗黙的に型がanyになる場合エラー */
+    // "strictNullChecks": true,                         /* 他のすべての型から null および undefined を代入不可 */
+    // "strictFunctionTypes": true,                      /* 関数の引数の型チェックが共変的（ Covariant ）ではなく、反変的（ Contravariant ）に行われるようにする */
+    // "strictBindCallApply": true,                      /* 'bind', 'call', 'apply'を使用して関数を呼び出した場合引数の型チェックを行う */
+    // "strictPropertyInitialization": true,             /* class内でプロパティ宣言があるがconstructor内で値がセットされていない場合エラー */
+    // "noImplicitThis": true,                           /* 暗黙的にthisの型がanyになる場合エラー */
+    // "useUnknownInCatchVariables": true,               /* catch 文で捕捉した例外を unknown として扱う */
+    // "alwaysStrict": true,                             /* 'use strict'を全てのファイルの先頭に付与する */
     "noUnusedLocals": true,                           /* 利用していないローカル変数がある場合エラー */
     "noUnusedParameters": true,                       /* 利用していない関数パラメータがある場合エラー */
     "exactOptionalPropertyTypes": true,               /* name?: stringのようなオプショナルプロパティに明示的にundefinedを代入できなくする */
@@ -98,7 +98,7 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true                                 /* .d.ts の型宣言ファイルに対する型チェックをスキップ */
   },
   "include": ["./src/ts/**/*.ts"]
 }
