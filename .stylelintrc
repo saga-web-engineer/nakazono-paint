@@ -8,6 +8,7 @@
   "plugins": ["stylelint-order", "stylelint-prettier"],
 
   "ignoreFiles": [
+    "**/node_modules/**",
     "dist/assets/css/*.css",
     "src/scss/foundation/*.scss",
     "src/scss/tool/_variables.scss",
