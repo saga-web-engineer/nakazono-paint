@@ -37,35 +37,35 @@
 }
 
 .p-plan-flow__title {
-  font-size: clamp(t.rem(18px), 9px + 1.75vw, t.rem(30px));
   gap: clamp(6px, 3px + 2.25vw, 30px);
+  font-size: clamp(t.rem(18px), 9px + 1.75vw, t.rem(30px));
   line-height: 1;
 }
 
 .p-plan-flow__number {
+  width: var(--number);
   aspect-ratio: 1;
+  padding: 0 0 4px 3px;
+  font-size: clamp(t.rem(20px), 10px + 1.83vw, t.rem(32px));
+  color: var(--base-color);
   background-color: var(--main-color);
   border-radius: 50%;
-  color: var(--base-color);
-  font-size: clamp(t.rem(20px), 10px + 1.83vw, t.rem(32px));
-  padding: 0 0 4px 3px;
-  width: var(--number);
 }
 
 .p-plan-flow__line {
-  border-bottom: 1px dotted var(--main-color);
-  height: 1px;
   width: clamp(20px, 10px + 3.33vw, 50px);
+  height: 1px;
+  border-bottom: 1px dotted var(--main-color);
 }
 
 .p-plan-flow__container {
   --p-tl: clamp(12px, 3.33vw, 50px);
   --p-b: clamp(12px, 3.33vw, 80px);
 
-  border-left: 1px dotted var(--main-color);
   left: calc(var(--number) / 2);
-  padding: var(--p-tl) 0 var(--p-b) var(--p-tl);
   width: calc(var(--width) - calc(var(--number) / 2));
+  padding: var(--p-tl) 0 var(--p-b) var(--p-tl);
+  border-left: 1px dotted var(--main-color);
 }
 
 .p-plan-flow__inner {

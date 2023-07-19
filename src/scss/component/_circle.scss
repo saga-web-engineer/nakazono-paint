@@ -1,15 +1,15 @@
 @use '../tool/' as t;
 
 .c-circle {
-  aspect-ratio: 1;
-  bottom: 3%;
   right: min(4%, 40px);
-  user-select: none;
+  bottom: 3%;
   width: clamp(110px, 40px + 11.67vw, 320px);
+  aspect-ratio: 1;
+  user-select: none;
 
   > svg {
-    animation: outer-rotate 40s linear infinite;
     height: fit-content;
+    animation: outer-rotate 40s linear infinite;
 
     @keyframes outer-rotate {
       0% {
@@ -24,13 +24,13 @@
 }
 
 .c-circle__icon {
-  animation: inner-rotate 48s linear infinite;
-  aspect-ratio: 1;
-  height: fit-content;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
   width: 76%;
+  height: fit-content;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  animation: inner-rotate 48s linear infinite;
 
   @keyframes inner-rotate {
     0% {
@@ -44,12 +44,12 @@
 }
 
 .c-circle__arrow {
-  height: fit-content;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform var(--duration-primary) var(--easing-hover);
+  left: 50%;
   width: 20%;
+  height: fit-content;
+  transition: transform var(--duration-primary) var(--easing-hover);
+  transform: translate(-50%, -50%);
 
   @at-root {
     .c-circle {

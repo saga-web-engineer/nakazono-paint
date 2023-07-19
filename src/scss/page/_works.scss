@@ -8,6 +8,6 @@
 }
 
 .p-works__list {
-  gap: clamp(10px, 2.93vw, 30px);
   grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 29.29vw, 410px), 1fr));
+  gap: clamp(10px, 2.93vw, 30px);
 }

@@ -7,7 +7,9 @@
   color: var(--white-color-primary);
   font-size: clamp(t.rem(18px), 9px + 1.69vw, t.rem(22px));
   padding-block: clamp(17px, 10px + 1.69vw, 23px);
-  transition: background-color var(--duration-secondary), color var(--duration-secondary) var(--easing-hover);
+  transition:
+    background-color var(--duration-secondary),
+    color var(--duration-secondary) var(--easing-hover);
   width: min(88vw, 380px);
 
   @include t.hover {
@@ -59,7 +61,9 @@
   &:not(:disabled) {
     background-color: var(--main-color);
     border: solid 1px var(--main-color);
-    transition: background-color var(--duration-secondary), color var(--duration-secondary) var(--easing-hover);
+    transition:
+      background-color var(--duration-secondary),
+      color var(--duration-secondary) var(--easing-hover);
 
     @include t.hover {
       background-color: var(--base-color);

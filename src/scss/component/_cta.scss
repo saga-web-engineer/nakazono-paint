@@ -13,9 +13,9 @@
 }
 
 .c-cta__heading {
-  color: var(--main-color);
   font-size: clamp(#{t.rem(74px)}, 36px + 6.71vw, #{t.rem(120px)});
   line-height: 1;
+  color: var(--main-color);
 }
 
 .c-cta__container {
@@ -32,8 +32,8 @@
   width: clamp(100px, 50px + 26.56vw, 254px);
 
   @include t.responsive(lg) {
+    top: clamp(215px, 107px + 10.93vw, 260px);
     bottom: auto;
     left: clamp(0px, 4.14vw - 30px, 63px);
-    top: clamp(215px, 107px + 10.93vw, 260px);
   }
 }

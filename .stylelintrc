@@ -1,14 +1,14 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier",
+    "stylelint-config-recess-order",
     "stylelint-prettier/recommended"
   ],
 
   "plugins": ["stylelint-order", "stylelint-prettier"],
 
   "ignoreFiles": [
-    "**/node_modules/**",
+    "**/node_ modules/**",
     "dist/assets/css/*.css",
     "src/scss/foundation/*.scss",
     "src/scss/tool/_variables.scss",
@@ -17,9 +17,7 @@
 
   "rules": {
     "prettier/prettier": true,
-    "indentation": 2,
     "declaration-colon-newline-after": null,
-    "value-list-comma-newline-after": "never-multi-line",
     "order/properties-alphabetical-order": true,
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,

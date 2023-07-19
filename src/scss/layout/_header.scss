@@ -1,13 +1,13 @@
 @use '../tool/' as t;
 
 .header {
-  background-color: transparent;
-  left: 0;
   top: 0;
+  left: 0;
+  background-color: transparent;
 
   @include t.responsive(xl) {
-    backdrop-filter: blur(10px);
     background-color: var(--header-color);
+    backdrop-filter: blur(10px);
   }
 }
 

@@ -4,8 +4,8 @@
   --space: clamp(40px, 11.72vw, 120px);
 
   gap: calc(var(--space) / 2);
-  padding-block: var(--space);
   width: min(100%, 800px);
+  padding-block: var(--space);
 }
 
 .c-form__text {
@@ -19,12 +19,12 @@
 }
 
 .c-form__required {
+  padding: 0.35em 0.6em;
+  font-size: 0.75em;
+  color: var(--base-color);
+  vertical-align: 2px;
   background-color: var(--pink-color-secondary);
   border-radius: 3px;
-  color: var(--base-color);
-  font-size: 0.75em;
-  padding: 0.35em 0.6em;
-  vertical-align: 2px;
 }
 
 .c-form__label {
@@ -32,25 +32,25 @@
 }
 
 .c-form__input {
+  width: 100%;
+  height: 3.125em;
+  padding: 0 1em;
+  overflow: hidden;
+  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
+  line-height: 3.125;
+  text-overflow: ellipsis;
   appearance: none;
   border: solid 1px var(--gray-color-tertiary);
-  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
-  height: 3.125em;
-  line-height: 3.125;
-  overflow: hidden;
-  padding: 0 1em;
-  text-overflow: ellipsis;
   transition: background-color var(--duration-secondary) var(--easing-hover);
-  width: 100%;
 }
 
 .c-form__textarea {
-  appearance: none;
-  border: solid 1px var(--gray-color-tertiary);
-  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
+  width: 100%;
   height: min(33.33vw, 200px);
   padding: 1em;
-  width: 100%;
+  font-size: clamp(t.rem(16px), 8px + 1.3vw, t.rem(18px));
+  appearance: none;
+  border: solid 1px var(--gray-color-tertiary);
 
   &:valid {
     border: solid 1px var(--green-color-primary);
@@ -68,9 +68,9 @@
 }
 
 .c-form__valid {
-  color: var(--green-color-primary);
-  right: 1em;
   top: 50%;
+  right: 1em;
+  color: var(--green-color-primary);
   transform: translateY(-50%);
 
   @at-root {
@@ -81,9 +81,9 @@
 }
 
 .c-form__invalid {
-  color: var(--red-color-primary);
-  right: 1em;
   top: 50%;
+  right: 1em;
+  color: var(--red-color-primary);
   transform: translateY(-50%);
 
   @at-root {
@@ -97,12 +97,12 @@
   }
 
   &.--text {
-    bottom: -2em;
-    font-size: 0.95em;
-    left: 0;
     top: auto;
-    transform: none;
+    bottom: -2em;
+    left: 0;
+    font-size: 0.95em;
     white-space: nowrap;
+    transform: none;
   }
 }
 

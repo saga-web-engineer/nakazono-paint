@@ -1,5 +1,5 @@
 {
-  "printWidth": 90,
+  "printWidth": 100,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -14,8 +14,7 @@
   "insertPragma": false,
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
-  "vueIndentScriptAndStyle": false,
-  "endOfLine": "auto",
+  "endOfLine": "lf",
   "embeddedLanguageFormatting": "auto",
   "singleAttributePerLine": false,
   "overrides": [
@@ -23,12 +22,6 @@
       "files": ["*.scss"],
       "options": {
         "printWidth": 140
-      }
-    },
-    {
-      "files": ["*.ejs"],
-      "options": {
-        "printWidth": 170
       }
     }
   ]

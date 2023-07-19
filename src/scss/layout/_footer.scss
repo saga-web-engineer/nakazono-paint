@@ -1,8 +1,8 @@
 @use '../tool/' as t;
 
 .footer__outer {
-  background-color: var(--gray-color-tertiary);
   padding-block: 40px 20px;
+  background-color: var(--gray-color-tertiary);
 
   @include t.responsive(xl) {
     padding-bottom: clamp(90px, 15px + 6.51vw, 140px);
@@ -22,14 +22,14 @@
 }
 
 .footer__list {
-  gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  padding: 40px 30px;
+  gap: 30px;
   place-items: center;
+  padding: 40px 30px;
 
   @include t.responsive(xl) {
-    border-bottom: solid 1px var(--gray-color-secondary);
     padding: 6px 0 30px;
+    border-bottom: solid 1px var(--gray-color-secondary);
   }
 }
 

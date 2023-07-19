@@ -9,9 +9,9 @@
 }
 
 .c-modal__overlay {
-  background-color: var(--shadow-color);
   inset: 0;
   margin: 0;
+  background-color: var(--shadow-color);
 
   @at-root {
     .c-modal-slide[aria-hidden='false'] & {
@@ -45,12 +45,12 @@
 }
 
 .c-modal__container {
+  top: 0;
+  right: 0;
+  width: min(90%, 330px);
   aspect-ratio: 33 / 46;
   border-radius: 50%;
-  right: 0;
-  top: 0;
   transform-origin: right top;
-  width: min(90%, 330px);
 
   @at-root {
     .c-modal-slide[aria-hidden='false'] & {
@@ -84,8 +84,8 @@
 }
 
 .c-modal__bg {
-  pointer-events: none;
-  right: -60px;
   top: -10px;
+  right: -60px;
+  pointer-events: none;
   transform: scale(1.9, 2.6);
 }

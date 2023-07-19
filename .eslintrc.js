@@ -1,15 +1,13 @@
-// https://eslint.org/docs/user-guide/getting-started
-
 module.exports = {
   root: true,
 
   parser: '@typescript-eslint/parser',
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'unicorn'],
 
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
     node: true,
     jest: true,
   },
@@ -23,7 +21,7 @@ module.exports = {
   },
 
   extends: [
-    // https://eslint.org/docs/rules/ にチェックのあるものを適用
+    // https://eslint.org/docs/latest/rules/ にチェックのあるものを適用
     'eslint:recommended',
     // https://typescript-eslint.io/rules/ にチェックのあるものを適用
     'plugin:@typescript-eslint/recommended',
@@ -33,9 +31,16 @@ module.exports = {
 
   rules: {
     'no-console': 'error',
-    camelcase: ['error', { properties: 'never' }],
+    'dot-notation': 'error',
+    'eqeqeq': 'error',
+    'no-new-func': 'error',
     semi: ['error', 'always'],
+    camelcase: ['error', { properties: 'never' }],
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'prefer-exponentiation-operator': 'warn',
+    'unicorn/prefer-node-protocol': 'error',
   },
 
-  ignorePatterns: ['dist'],
+  ignorePatterns: ['dist', 'copyfile.mjs'],
 };

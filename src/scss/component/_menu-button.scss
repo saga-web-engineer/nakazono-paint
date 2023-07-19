@@ -1,22 +1,22 @@
 @use '../tool/' as t;
 
 .c-menu-button {
+  width: 80px;
   aspect-ratio: 1;
   background-color: transparent;
-  width: 80px;
 
   &.--close {
-    right: 0;
     top: 0;
+    right: 0;
   }
 }
 
 .c-menu-button__parts {
-  background-color: var(--base-color);
-  height: 1px;
   left: 50%;
-  transform: translateX(-50%);
   width: 46%;
+  height: 1px;
+  background-color: var(--base-color);
+  transform: translateX(-50%);
 
   &.--open {
     &:nth-of-type(1) {
@@ -32,14 +32,14 @@
       top: 52%;
 
       &::after {
-        color: var(--base-color);
-        content: 'Menu';
-        font-size: t.rem(11px);
-        left: 50%;
         position: absolute;
         top: 4px;
-        transform: translateX(-50%);
+        left: 50%;
+        font-size: t.rem(11px);
+        color: var(--base-color);
         white-space: nowrap;
+        content: 'Menu';
+        transform: translateX(-50%);
       }
     }
   }
@@ -55,14 +55,14 @@
       transform: translateX(-50%) rotate(45deg);
 
       &::after {
-        color: var(--base-color);
-        content: 'Close';
-        font-size: t.rem(11px);
-        left: 19px;
         position: absolute;
         top: 7px;
-        transform: rotate(-45deg);
+        left: 19px;
+        font-size: t.rem(11px);
+        color: var(--base-color);
         white-space: nowrap;
+        content: 'Close';
+        transform: rotate(-45deg);
       }
     }
   }

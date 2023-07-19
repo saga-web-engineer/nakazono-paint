@@ -3,6 +3,7 @@
 import './accordion';
 import './ariaHiddenToBr';
 import './bfcacheReload';
+import './favicon';
 import './fixBanner';
 import './modal';
 import './parallax';

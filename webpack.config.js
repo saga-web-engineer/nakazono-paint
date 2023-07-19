@@ -1,5 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const path = require('path');
+const path = require('node:path');
 // ライセンスをjsファイルの中に含める
 const TerserPlugin = require('terser-webpack-plugin');
 

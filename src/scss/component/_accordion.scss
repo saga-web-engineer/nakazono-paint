@@ -9,7 +9,9 @@
   --blur: min(2.6vw, 60px);
 
   background-color: var(--base-color);
-  box-shadow: var(--offset1) var(--offset1) var(--blur) var(--gray-color-quaternary),var(--offset2) var(--offset2) var(--blur) var(--base-color);
+  box-shadow:
+    var(--offset1) var(--offset1) var(--blur) var(--gray-color-quaternary),
+    var(--offset2) var(--offset2) var(--blur) var(--base-color);
 }
 
 .c-accordion__title {

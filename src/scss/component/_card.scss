@@ -8,7 +8,9 @@
   border-radius: calc(var(--inner) + var(--space));
   height: 100%;
   padding: var(--space) var(--space) calc(var(--space) * 2);
-  transition: transform var(--duration-secondary) var(--easing-hover), box-shadow var(--duration-secondary) var(--easing-hover);
+  transition:
+    transform var(--duration-secondary) var(--easing-hover),
+    box-shadow var(--duration-secondary) var(--easing-hover);
   width: 100%;
 
   @include t.hover {

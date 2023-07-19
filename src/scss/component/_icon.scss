@@ -1,18 +1,18 @@
 @use '../tool/' as t;
 
 .c-icon {
-  direction: ltr;
   font-family: var(--font-icon);
-  font-feature-settings: 'liga';
   font-size: 1.2em;
-  -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
-  letter-spacing: normal;
+  font-feature-settings: 'liga';
   line-height: inherit;
   text-transform: none;
-  white-space: nowrap;
+  letter-spacing: normal;
   word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 
   // &.--mail {
   //   color: var(--gray-color-primary);

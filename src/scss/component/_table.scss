@@ -1,9 +1,9 @@
 @use '../tool/' as t;
 
 .c-table {
-  border: solid 1px var(--gray-color-quaternary);
-  border-collapse: collapse;
   width: max(100%, 1010px);
+  border-collapse: collapse;
+  border: solid 1px var(--gray-color-quaternary);
 
   @include t.responsive(lg) {
     width: 100%;
@@ -42,12 +42,12 @@
   }
 
   &:empty::before {
-    background-color: var(--text-color);
-    content: '';
     display: block;
+    width: 10px;
     height: 1px;
     margin-inline: auto;
-    width: 10px;
+    content: '';
+    background-color: var(--text-color);
   }
 
   @at-root {

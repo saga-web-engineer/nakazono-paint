@@ -5,7 +5,9 @@
   pointer-events: none;
   right: 0;
   top: 18vh;
-  transition: opacity var(--duration-secondary), transform var(--duration-secondary) var(--easing-faded);
+  transition:
+    opacity var(--duration-secondary),
+    transform var(--duration-secondary) var(--easing-faded);
   visibility: hidden;
 
   &.is-active {

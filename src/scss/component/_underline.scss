@@ -1,10 +1,10 @@
 @use '../tool/' as t;
 
 .c-underline {
-  text-decoration-color: var(--text-color);
   text-decoration-line: underline;
-  text-decoration-style: solid;
   text-decoration-thickness: 1px;
+  text-decoration-style: solid;
+  text-decoration-color: var(--text-color);
   transition: opacity var(--duration-secondary) var(--easing-hover);
 
   @include t.hover {

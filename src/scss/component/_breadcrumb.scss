@@ -2,18 +2,18 @@
 
 .c-breadcrumb__item {
   &:last-of-type {
-    text-decoration-color: var(--text-color);
     text-decoration-line: underline;
-    text-decoration-style: solid;
     text-decoration-thickness: 1px;
+    text-decoration-style: solid;
+    text-decoration-color: var(--text-color);
     text-underline-offset: 2px;
   }
 
   &:not(:last-child)::after {
+    margin: 0 1em;
+    font-size: 0.9em;
     color: var(--main-color);
     content: '▶';
-    font-size: 0.9em;
-    margin: 0 1em;
   }
 }
 
