@@ -15,8 +15,8 @@
 }
 
 .c-accordion__title {
-  border: solid 1px transparent;
   padding: var(--py) var(--px);
+  border: solid 1px transparent;
   transition: opacity var(--duration-secondary) var(--easing-hover);
 
   @include t.hover {
@@ -24,20 +24,20 @@
   }
 
   &::before {
+    position: absolute;
+    left: var(--left);
     color: var(--main-color);
     content: 'Q.';
-    left: var(--left);
-    position: absolute;
   }
 }
 
 .c-accordion__icon {
-  color: var(--main-color);
-  font-size: clamp(#{t.rem(22px)}, 5.56vw, #{t.rem(30px)});
-  right: 0.75em;
   top: 50%;
-  transform: translateY(-50%);
+  right: 0.75em;
+  font-size: clamp(#{t.rem(22px)}, 5.56vw, #{t.rem(30px)});
+  color: var(--main-color);
   transition: transform 0.3s var(--easing-hover);
+  transform: translateY(-50%);
 
   @at-root {
     .c-accordion.is-open & {
@@ -69,9 +69,9 @@
   padding: var(--py) var(--px);
 
   &::before {
+    position: absolute;
+    left: var(--left);
     color: var(--main-color);
     content: 'A.';
-    left: var(--left);
-    position: absolute;
   }
 }
