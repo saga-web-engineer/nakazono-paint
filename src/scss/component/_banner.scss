@@ -6,11 +6,9 @@
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition:
-    opacity var(--duration-secondary),
-    transform var(--duration-secondary) var(--easing-faded);
+  transition: all var(--duration-secondary) var(--easing-faded);
 
-  &.is-active {
+  &[aria-hidden="false"] {
     pointer-events: auto;
     visibility: visible;
     opacity: 1;

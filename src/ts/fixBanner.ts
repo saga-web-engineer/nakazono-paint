@@ -5,15 +5,14 @@
 const fixBanner = () => {
   const banner = document.querySelector<HTMLAnchorElement>('#fix-banner');
 
-  if (!banner) return;
-
   if (200 < window.scrollY && window.matchMedia('(min-width: 1880px)').matches) {
-    banner.classList.add('is-active');
+    banner?.setAttribute("aria-hidden", "false");
   } else {
-    banner.classList.remove('is-active');
+    banner?.setAttribute("aria-hidden", "true");
   }
 };
 
 addEventListener('scroll', fixBanner, false);
 
-export {};
+export { };
+
