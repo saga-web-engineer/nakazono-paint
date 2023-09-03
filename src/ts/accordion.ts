@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const setUpAccordion = () => {
-  const details = document.querySelectorAll<HTMLElement>('.js-details');
+  const details = document.querySelectorAll<HTMLDetailsElement>('.js-details');
   const IS_OPENED_CLASS = 'is-open';
 
   details.forEach((element) => {
     const summary = element.querySelector<HTMLElement>('.js-summary');
-    const content = element.querySelector<HTMLElement>('.js-content');
+    const content = element.querySelector<HTMLDivElement>('.js-content');
 
     if (!summary) return;
 
@@ -40,7 +40,7 @@ const setUpAccordion = () => {
   });
 };
 
-const closingAnim = (content: HTMLElement, element: HTMLElement) =>
+const closingAnim = (content: HTMLDivElement, element: HTMLDetailsElement) =>
   gsap.to(content, {
     height: 0,
     opacity: 0,

@@ -8,4 +8,8 @@ MicroModal.init({
   awaitCloseAnimation: true,
 });
 
+addEventListener('pagehide', () => {
+  document.querySelector<HTMLElement>('[data-micromodal-close]')?.click();
+});
+
 export {};
