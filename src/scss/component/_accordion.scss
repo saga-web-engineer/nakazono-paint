@@ -34,7 +34,7 @@
 .c-accordion__icon {
   top: 50%;
   right: 0.75em;
-  font-size: clamp(#{t.rem(22px)}, 5.56vw, #{t.rem(30px)});
+  font-size: clamp(t.rem(22px), 5.56vw, t.rem(30px));
   color: var(--main-color);
   transition: transform 0.3s var(--easing-hover);
   transform: translateY(-50%);
@@ -48,21 +48,6 @@
 
 .c-accordion__content {
   overflow: hidden;
-
-  // border: solid 1px transparent;
-  // transition: border var(--duration-secondary) var(--easing-hover);
-
-  // @at-root {
-  //   .c-accordion__title {
-  //     @include t.hover {
-  //       & + .c-accordion__content {
-  //         border-right: solid 1px var(--main-color);
-  //         border-left: solid 1px var(--main-color);
-  //         border-bottom: solid 1px var(--main-color);
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .c-accordion__text {

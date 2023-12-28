@@ -5,7 +5,12 @@
   --gradation-blue-primary: rgb(5 176 255 / 10%);
   --gradation-blue-secondary: rgb(5 176 255 / 20%);
 
-  background: linear-gradient(180deg, var(--base-color) 10%, var(--gradation-blue-primary) 50%, var(--gradation-blue-secondary));
+  background: linear-gradient(
+    180deg,
+    var(--base-color) 10%,
+    var(--gradation-blue-primary) 50%,
+    var(--gradation-blue-secondary)
+  );
 }
 
 .c-cta__outer {

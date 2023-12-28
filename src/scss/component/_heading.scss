@@ -1,7 +1,7 @@
 @use '../tool/' as t;
 
 .c-heading {
-  font-size: clamp(#{t.rem(28px)}, 14px + 2.83vw, #{t.rem(48px)});
+  font-size: clamp(t.rem(28px), 14px + 2.83vw, t.rem(48px));
 
   &::before {
     position: absolute;
@@ -9,7 +9,7 @@
     left: 0;
     z-index: -1;
     font-family: var(--font-english);
-    font-size: clamp(#{t.rem(120px)}, 60px + 18.75vw, #{t.rem(360px)});
+    font-size: clamp(t.rem(120px), 60px + 18.75vw, t.rem(360px));
     line-height: 0.8;
     color: var(--white-color-primary);
     content: attr(data-english);

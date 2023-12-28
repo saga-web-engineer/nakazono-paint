@@ -29,31 +29,11 @@ html {
 
 body {
   font-family: var(--font-default);
-  font-size: clamp(#{t.rem(14px)}, #{t.rem(10px)} + 1.04vw, #{t.rem(18px)});
+  font-size: clamp(t.rem(14px), t.rem(10px) + 1.04vw, t.rem(18px));
   color: var(--text-color);
   font-weight: 400;
   background-color: var(--base-color);
   letter-spacing: 0.125em;
   line-height: 1.8;
   text-size-adjust: 100%;
-
-  @include t.responsive(sm) {
-    margin: 0;
-  }
-
-  @include t.responsive(md) {
-    margin: 0;
-  }
-
-  @include t.responsive(lg) {
-    margin: 0;
-  }
-
-  @include t.responsive(xl) {
-    margin: 0;
-  }
-
-  @include t.responsive(xxl) {
-    margin: 0;
-  }
 }

@@ -10,7 +10,6 @@
   height: clamp(568px, 142vw, 1352px);
 
   @include t.responsive(lg) {
-    // height: min(132.13vw, 1938px);
     height: clamp(1353px, 200px + 112.86vw, 1938px);
     padding-bottom: min(30%, 460px);
   }
@@ -25,7 +24,7 @@
 .p-top-mv__copy {
   bottom: 16%;
   left: min(7%, 133px);
-  font-size: clamp(#{t.rem(30px)}, 15px + 4.64vw, #{t.rem(80px)});
+  font-size: clamp(t.rem(30px), 15px + 4.64vw, t.rem(80px));
   mix-blend-mode: multiply;
 
   &::before {
@@ -118,9 +117,6 @@
 }
 
 // about
-// .p-top-about {
-//   padding-top: 11.11vw;
-// }
 .p-top-about__container {
   padding-top: min(11.11vw, 120px);
 }
