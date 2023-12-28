@@ -26,8 +26,8 @@
     "prepare:all": "run-p min:css delete:map"
   },
   "volta": {
-    "node": "18.16.0",
-    "npm": "9.5.1"
+    "node": "20.10.0",
+    "npm": "10.2.3"
   },
   "browserslist": [
     "> 0.2%, not dead",
@@ -36,19 +36,17 @@
     "safari > 12, ios > 12"
   ],
   "dependencies": {
-    "core-js": "^3.34.0",
     "gsap": "^3.12.4",
     "micromodal": "0.4.10"
   },
   "devDependencies": {
-    "@types/core-js": "^2.5.8",
     "@types/jest": "^29.5.11",
     "@types/micromodal": "^0.3.5",
     "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "autoprefixer": "^10.4.16",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.2",
     "chokidar-cli": "^3.0.0",
     "clean-css-cli": "^5.6.3",
     "ejs-cli": "^2.2.3",
@@ -66,7 +64,7 @@
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "stylelint": "^16.0.2",
+    "stylelint": "^16.1.0",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-standard-scss": "^12.0.0",
     "stylelint-order": "^6.0.4",
