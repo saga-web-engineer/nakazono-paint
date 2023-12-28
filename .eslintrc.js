@@ -13,7 +13,6 @@ module.exports = {
   },
 
   parserOptions: {
-    // envで指定している場合はそちらが優先される
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.eslint.json',
@@ -21,9 +20,7 @@ module.exports = {
   },
 
   extends: [
-    // https://eslint.org/docs/latest/rules/ にチェックのあるものを適用
     'eslint:recommended',
-    // https://typescript-eslint.io/rules/ にチェックのあるものを適用
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
@@ -40,6 +37,15 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-exponentiation-operator': 'warn',
     'unicorn/prefer-node-protocol': 'error',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+      },
+    ],
   },
 
   ignorePatterns: ['dist', 'copyfile.mjs'],
