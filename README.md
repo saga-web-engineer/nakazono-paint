@@ -6,8 +6,8 @@ https://nakazono-paint.netlify.app/
 
 ## Version
 Voltaで管理しています。
-- Node 18.16.0
-- npm 9.5.1
+- Node 20.10.0
+- npm 10.2.3
 
 ## start
 1.  **install**  
