@@ -23,8 +23,8 @@
   img {
     width: 100vw;
     max-height: 390px;
-    border-radius: var(--inner);
     object-fit: cover;
+    border-radius: var(--inner);
 
     @include t.responsive(sm) {
       max-height: 290px;
