@@ -212,7 +212,7 @@
 // plan
 .p-top-plan__list {
   gap: 40px 0;
-  padding: min(11.11vw, 80px) 0 min(16.67vw, 80px) 0;
+  padding: min(11.11vw, 80px) 0 min(16.67vw, 80px);
 
   @include t.responsive(lg) {
     grid-template-columns: repeat(2, 1fr);
