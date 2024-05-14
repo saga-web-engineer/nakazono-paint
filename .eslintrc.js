@@ -3,7 +3,7 @@ module.exports = {
 
   parser: '@typescript-eslint/parser',
 
-  plugins: ['@typescript-eslint', 'unicorn'],
+  plugins: ['@typescript-eslint'],
 
   env: {
     browser: true,
@@ -29,14 +29,13 @@ module.exports = {
   rules: {
     'no-console': 'error',
     'dot-notation': 'error',
-    'eqeqeq': 'error',
+    eqeqeq: 'error',
     'no-new-func': 'error',
     semi: ['error', 'always'],
     camelcase: ['error', { properties: 'never' }],
     'no-var': 'error',
     'prefer-const': 'error',
     'prefer-exponentiation-operator': 'warn',
-    'unicorn/prefer-node-protocol': 'error',
     'no-unused-vars': [
       'error',
       {
